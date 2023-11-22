@@ -21,10 +21,20 @@ To define custom variables :
 3. Navigate to the Variables section
 
 In this section, users can create, update or delete custom variables.
+![Variables section](assets/variables-management.png)
 
 ### Limitation
 
 To create custom variables, consider the following limitation:
 
-- Ensure variable key are in lowercase letter and can contains ```_```
+- Only lowercase characters and ```_``` are authorized for the key value
 - Variable value can only be string
+
+## Use Variables
+
+These variables can be used to enhance personalization of certain stimuli within an exercise.
+Here is a non-exhaustive list of concerned stimuli :
+- Email sending
+- Sms sending
+
+![Variables usage](assets/variables-usage.png)
