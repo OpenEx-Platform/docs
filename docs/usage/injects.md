@@ -24,12 +24,14 @@ directly played by the players and those simulated by the animation team.
 Email, SMS or Media Pressure type inject can have manual expectations.
 This allows to create expectations which will be validated once the inject has executed.
 
+![Add expectation manual](assets/add-expectation-manual.png)
 ![Expectation manual](assets/expectation-manual.png)
 
 ### Media pressure expectation
 
 This allows to create an expectation which will be validated once the audience concerned by the inject has read the article(s).
 
+![Add expectation media](assets/add-expectation-media.png)
 ![Expectation media](assets/expectation-media.png)
 
 ### Challenge expectation
@@ -41,3 +43,4 @@ An expectation is automatically created and it will be validated once the audien
 These expectations can be viewed and validated, in the case of manual expectations, in a dedicated view.
 
 ![Expectation validation](assets/expectation-validation.png)
+![Expectation validation manual](assets/expectation-validation-manual.png)
