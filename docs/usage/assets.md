@@ -26,6 +26,8 @@ Examples of endpoints:
 - **IoT Devices**: Internet of Things (IoT) devices, such as smart thermostats, cameras, or sensors, can also be
   considered endpoints.
 
+The **Status** row depends on the time when the asset was last seen. If that time is less than 6 hours, the asset is considered active and inactive if not.
+
 ## Asset groups
 
 An asset group refers to a collection or grouping of related assets within an organization. Asset groups typically share
