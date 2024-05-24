@@ -87,7 +87,7 @@ Here are the configuration keys, for both containers (environment variables) and
 | openbas.rabbitmq.ssl        | OPENBAS_RABBITMQ_SSL        | `false`       | Use SSL                                     |
 | openbas.rabbitmq.user       | OPENBAS_RABBITMQ_USER       | guest         | RabbitMQ user                               |
 | openbas.rabbitmq.pass       | OPENBAS_RABBITMQ_PASS       | guest         | RabbitMQ password                           |
-| openbas.rabbitmq.queue-type | OPENBAS_RABBITMQ_QUEUE-TYPE | classic       | RabbitMQ Queue Type ("classic" or "quorum") |
+| openbas.rabbitmq.queue-type | OPENBAS_RABBITMQ_QUEUE_TYPE | classic       | RabbitMQ Queue Type ("classic" or "quorum") |
 
 #### S3 bucket
 
