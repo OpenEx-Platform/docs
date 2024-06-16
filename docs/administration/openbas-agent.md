@@ -24,7 +24,11 @@ The main features of the OpenBAS agent are:
 - Deleting executables and execution directories
   The agent deletes implants that have been running for a predefined time and cleans the execution directories.
 
-## Troubleshooting
+The following flow diagram represents the Agent installation flow :
+
+![img.png](img.png) 
+
+## Listed Issues
 
 ** If there is an installation of openBAS-agent on an asset, and then you try to re-install again, 
 you got the following error
