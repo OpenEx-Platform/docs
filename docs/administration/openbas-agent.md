@@ -26,16 +26,5 @@ The main features of the OpenBAS agent are:
 
 The following flow diagram represents the Agent installation flow :
 
-![img.png](img.png) 
-
-## Listed Issues
-
-** If there is an installation of openBAS-agent on an asset, and then you try to re-install again, 
-you got the following error
-
-![img.png](../assets/images/img.png)
-
-
-** When we try to uninstall an agent through the file uninstall.exe, it doesn't stop the service 
-and doesn't suppress completely all files and directories (Windows environment)
+![img.png](img.png)
 
