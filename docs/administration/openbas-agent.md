@@ -26,5 +26,5 @@ The main features of the OpenBAS agent are:
 
 The following flow diagram represents the Agent installation flow :
 
-![img.png](img.png)
+![img.png](../assets/images/agent_installation_flow_diagram.png)
 
