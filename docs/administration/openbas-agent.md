@@ -14,17 +14,22 @@ It aims to be able to be run on different OS (Windows, Linux, macOS). It is deve
 
 Depending on the OS, several installations are at your disposal :
 
-- Linux
+Linux
+
   - Requirement → systemd, access to the openbas instance used
   - Installation → Create a service with name openbas-agent
   - Verification command line → `systemctl enable openbas-agent`
   - Start/Stop service →`systemctl start openbas-agent` & `systemctl stop openbas-agent`
-- MacOS
+
+MacOS
+
   - Requirement → access to the openbas instance used
   - Installation → Create a service with name openbas-agent
   - Verification command line → `launchctl list | grep openbas.agent`
   - Start/Stop service → `launchctl bootstrap system ~/Library/LaunchDaemons/openbas-agent.plist` & `launchctl bootout system ~/Library/LaunchDaemons/openbas-agent.plist`
-- Windows
+
+Windows
+
   - Requirement → admin user, access to the openbas instance used
   - Installation → Create a service with name openbas-agent and
   - Verification command line → `Get-Service -Name "OBASAgentService"`
