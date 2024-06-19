@@ -53,6 +53,7 @@ The main features of the OpenBAS agent are:
   Each job execution logs is kept in a dedicated directory in order to have a trace of what happened (pid, executable).
 
 - Deleting executables and execution directories
+
   The agent deletes implants that have been running for a predefined time and cleans the execution directories.
 
 - Health check
