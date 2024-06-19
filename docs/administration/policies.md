@@ -16,9 +16,12 @@ Administrators can create and manage messages that are displayed to users upon l
 
 These messages can be customized to fit the organization's specific needs and requirements, ensuring that critical information is communicated effectively to users.
 
-![Login](assets/login.png)
-
-![Policies configuration](assets/policies-conf.png)
+<p align="center">
+<img src="assets/login.png" width="350">
+</p>
+<p align="center">
+<img src="assets/policies-conf.png" width="350">
+</p>
 
 ### Accessing the Policies Configuration Page
 
