@@ -2,11 +2,11 @@
 
 ## Introduction
 
-The openBAS agent is an application whose main role is to enroll an asset on the OpenBAS platform,
+The OpenBAS Agent is an application whose main role is to enroll an Asset on the OpenBAS platform,
 to retrieve jobs or scripts to be executed and to transmit this information to the implants (subject to come)
-for execution on the host asset.
+for execution on the host Asset.
 
-The agent will not perform direct attack to remain neutral for antivirus.
+The Agent will not perform direct attack to remain neutral for antivirus.
 
 It aims to be able to be run on different OS (Windows, Linux, macOS). It is developed in Rust
 
@@ -41,34 +41,34 @@ The following flow diagram represents the Agent installation flow :
 
 ## Features
 
-The main features of the OpenBAS agent are:
+The main features of the OpenBAS Agent are:
 - Agent registration on the OpenBAS platform
 
-  The agent is installed on the asset using an agent-installer.exe file and runs as a service.
-  It communicates with the deployed OpenBAS instance in order to enroll the asset.
+  The Agent is installed on the Asset using an agent-installer.exe file and runs as a service.
+  It communicates with the deployed OpenBAS instance in order to enroll the Asset.
 
 ![Agent assets status](assets/agent_assets_status.png)
 
-- Auto upgrade the agent (on start-up and registration)
+- Auto upgrade the Agent (on start-up and registration)
 
 - Retrieval of jobs to be executed
 
-  The agent retrieves jobs to be executed from the OpenBAS instance every 30 seconds. 
-  For the moment, jobs are implant launches on the asset to be able to execute attacks. 
+  The Agent retrieves jobs to be executed from the OpenBAS instance every 30 seconds. 
+  For the moment, jobs are Implant launches on the Asset to be able to execute attacks. 
   Each job execution logs is kept in a dedicated directory in order to have a trace of what happened (pid, executable).
 
 - Deleting executables and execution directories
 
-  The agent deletes implants that have been running for a predefined time and cleans the execution directories.
+  The Agent deletes implants that have been running for a predefined time and cleans the execution directories.
 
 - Health check
 
-  The agent pings the OpenBAS instance every 2 minutes to notify it of its healthy status.
+  The Agent pings the OpenBAS instance every 2 minutes to notify it of its healthy status.
 
 - Cleanup
 
-  The agent ensures that the processes it has executed are correctly finished or deleted if necessary. 
+  The Agent ensures that the processes it has executed are correctly finished or deleted if necessary. 
   The maximum time in minutes that a process associated with an execution directory can remain active is 20 minutes.
 
-  The agent removes execution directories to avoid excessive disk space. 
+  The Agent removes execution directories to avoid excessive disk space. 
   The maximum time in minutes that an execution directory can be kept before being deleted is 2 days.
