@@ -3,12 +3,12 @@
 ## Introduction
 
 The OpenBAS Agent is an application whose main role is to enroll an Asset on the OpenBAS platform,
-to retrieve jobs or scripts to be executed and to transmit this information to the implants (subject to come)
+to retrieve jobs or scripts to be executed and to transmit this information to Implants (subject to come)
 for execution on the host Asset.
 
-The Agent will not perform direct attack to remain neutral for antivirus.
+The Agent will not perform direct actions on the Asset to remain neutral for antivirus and ensure the full run of the simulation.
 
-It aims to be able to be run on different OS (Windows, Linux, macOS). It is developed in Rust
+The OpenBAS Agent is compatible with different OS (Windows, Linux, macOS) and is developed in Rust.
 
 ## Installation
 
@@ -53,13 +53,13 @@ The main features of the OpenBAS Agent are:
 
 - Retrieval of jobs to be executed
 
-  The Agent retrieves jobs to be executed from the OpenBAS instance every 30 seconds. 
-  For the moment, jobs are Implant launches on the Asset to be able to execute attacks. 
+  The Agent retrieves jobs to be executed from the OpenBAS instance every 30 seconds.
+  For the moment, jobs are Implant to spawn and launch on the Asset, waiting to execute payloads of your Simulation's Injects.
   Each job execution logs is kept in a dedicated directory in order to have a trace of what happened (pid, executable).
 
 - Deleting executables and execution directories
 
-  The Agent deletes implants that have been running for a predefined time and cleans the execution directories.
+  The Agent deletes Implants that have been running for a predefined time and cleans the execution directories.
 
 - Health check
 
