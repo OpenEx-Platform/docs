@@ -1,4 +1,4 @@
-# Challenges
+# Lessons
 
 !!! tip "Under construction"
 
