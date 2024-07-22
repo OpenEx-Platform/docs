@@ -150,7 +150,7 @@ nav:
         - Channels: usage/components/channels.md
         - Media pressure: usage/components/media_pressure.md
         - Challenges: usage/components/challenges.md
-        - Lessons: usage/lessons/lessons.md
+        - Lessons: usage/components/lessons.md
         - Payloads: usage/components/payloads.md
     - Share and export:
       - Exports: usage/exports.md
