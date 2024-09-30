@@ -49,3 +49,18 @@ If you have configured manual expectations in your scenario, you will have the o
 
 <!-- screenshot of the screen populated with manual validation to perform -->
 
+### Customize expectations expiration time
+
+Expectations results must be validated within a time limit. Depending on the expectation's type, there is a default expiration time set in the system. Users have two ways to modify that expiration time:
+
+- In the application.properties file
+
+![Customize expiration time in app.properties](assets/app_properties_customize_expiration_time.png)
+
+A default expiration time is set for technical and human expectations. Users can override them for each type of expectations.
+
+- In the UI
+
+![Customize expiration time in UI](assets/expectation_customize_expiration_time.png)
+
+When creating an expectation, users can set expiration time. The system's default times are set on the form and users can change it or not.
