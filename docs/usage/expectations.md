@@ -32,9 +32,8 @@ There are two modes for validating an expectation :
 
 - `At least one target (per group) must validate the expectation` : here, the success of the group depends on at least one target succeeding. If one target succeeds, the group is considered successful. The score is an average of all successful targets' scores.
 
-<div style="text-align: center;">
-  <img src="assets/validation_mode.png" alt="Validation mode">
-</div>
+![Validation mode](assets/validation_mode.png)
+
 ## Expectation manipulation
 
 ### Add an expectation to an Inject
