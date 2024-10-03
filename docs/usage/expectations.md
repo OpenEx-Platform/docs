@@ -53,7 +53,16 @@ If you have configured manual expectations in your scenario, you will have the o
 
 Expectations results must be validated within a time limit. Depending on the expectation's type, there is a default expiration time set in the system. Users have two ways to modify that expiration time:
 
-- In the Docker .env file
+- In the Docker .env file thanks to these variables
+| Parameter                                       | Environment variable                            | Default value      | Description                                                            |
+|:------------------------------------------------|:------------------------------------------------|:-------------------|:-----------------------------------------------------------------------|
+| openbas.expectation.technical.expiration-time   | OPENBAS_EXPECTATION_TECHNICAL_EXPIRATION-TIME   | 21600              | Expiration time for Technical expectation (detection & prevention)      |
+| openbas.expectation.detection.expiration-time   | OPENBAS_EXPECTATION_DETECTION_EXPIRATION-TIME   | 21600              | Expiration time for detection expectation                               |
+| openbas.expectation.prevention.expiration-time  | OPENBAS_EXPECTATION_PREVENTION_EXPIRATION-TIME  | 21600              | Expiration time for prevention expectation                              |
+| openbas.expectation.human.expiration-time       | OPENBAS_EXPECTATION_HUMAN_EXPIRATION-TIME       | 86400              | Expiration time for human expectation (manual, challenge & article)     |
+| openbas.expectation.challenge.expiration-time   | OPENBAS_EXPECTATION_CHALLENGE_EXPIRATION-TIME   | 86400              | Expiration time for challenge expectation                               |
+| openbas.expectation.article.expiration-time     | OPENBAS_EXPECTATION_ARTICLE_EXPIRATION-TIME     | 86400              | Expiration time for article expectation                                 |
+| openbas.expectation.manual.expiration-time      | OPENBAS_EXPECTATION_MANUAL_EXPIRATION-TIME      | 86400              | Expiration time for manual expectation                                  |
 
 A default expiration time is set for technical and human expectations. Users can override them for each type of expectations.
 
