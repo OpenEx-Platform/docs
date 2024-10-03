@@ -54,6 +54,7 @@ If you have configured manual expectations in your scenario, you will have the o
 Expectations results must be validated within a time limit. Depending on the expectation's type, there is a default expiration time set in the system. Users have two ways to modify that expiration time:
 
 - In the Docker .env file thanks to these variables
+
 | Parameter                                       | Environment variable                            | Default value      | Description                                                            |
 |:------------------------------------------------|:------------------------------------------------|:-------------------|:-----------------------------------------------------------------------|
 | openbas.expectation.technical.expiration-time   | OPENBAS_EXPECTATION_TECHNICAL_EXPIRATION-TIME   | 21600              | Expiration time for Technical expectation (detection & prevention)      |
