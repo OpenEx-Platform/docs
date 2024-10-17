@@ -9,6 +9,7 @@ Examples of built-in variables include but not limited to :
 - **${user.email}**: Represents the email of the target user
 - **${exercise.name}**: Represents the name of the current exercise
 - **${player_uri}**: Represents the player interface platform link
+- **${teams}**: Represents the list of team name/s for the injection
 
 The list of **available variables** is found in the definition of the inject :
 
@@ -46,3 +47,8 @@ Here is a non-exhaustive list of concerned injects :
 
 ![Variables usage](../assets/variables_usage.png)
 ![Variables usage](../assets/variables_usage_in_email.png)
+
+In case of a list like `articles`, which is a list of articles with properties such as `id`, `name`, and `uri`, or `${teams}`, you could write:
+
+<#list articles as article> - `${article.name}` </#list>  
+<#list teams as team> `${team}` </#list>
