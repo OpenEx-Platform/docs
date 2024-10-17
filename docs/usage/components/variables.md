@@ -10,6 +10,11 @@ Examples of built-in variables include but not limited to :
 - **${exercise.name}**: Represents the name of the current exercise
 - **${player_uri}**: Represents the player interface platform link
 
+The list of **available variables** is found in the definition of the inject :
+
+![Variables section](../assets/variables_inject_definition.png)
+![Variables section](../assets/variables_list.png)
+
 ## Custom Variables
 
 In addition to the built-in variables, users can define their own variables within an exercise.
@@ -20,8 +25,10 @@ To define custom variables :
 2. Navigate to the Definition tab
 3. Navigate to the Variables section
 
-In this section, users can create, update or delete custom variables.
-![Variables section](../assets/variables-management.png)
+In this section, users can create, update or delete custom variables : 
+
+![Variables section](../assets/variables_management.png)
+![Variables section](../assets/variables_creation.png)
 
 ### Limitation
 
@@ -32,9 +39,10 @@ To create custom variables, consider the following limitation:
 
 ## Use Variables
 
-These variables can be used to enhance personalization of certain stimuli within an exercise.
-Here is a non-exhaustive list of concerned stimuli :
+These variables can be used to enhance personalization of certain injects within an exercise.
+Here is a non-exhaustive list of concerned injects :
 - Email sending
 - Sms sending
 
-![Variables usage](../assets/variables-usage.png)
+![Variables usage](../assets/variables_usage.png)
+![Variables usage](../assets/variables_usage_in_email.png)
