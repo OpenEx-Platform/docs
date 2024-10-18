@@ -11,6 +11,7 @@ Examples of built-in variables include but not limited to :
 - **${player_uri}**: Represents the player interface platform link
 - **${teams}**: Represents the list of team name/s for the injection
 
+
 The list of **available variables** is found in the definition of the inject :
 
 ![Variables section](../assets/variables_inject_definition.png)
