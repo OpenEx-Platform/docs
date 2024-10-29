@@ -14,7 +14,7 @@ This integration works across multiple entities:
 
 ![simulate button](assets/simulate-btn.png)
 
-When you click the simulate button, you’ll have two options:
+When you click on the simulate button, you’ll have two options:
 
 - Generate a scenario based on technical injects
 - Generate a scenario based on email injects, using AI to automatically generate email content
