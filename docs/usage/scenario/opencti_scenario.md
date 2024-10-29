@@ -19,7 +19,7 @@ When you click on the simulate button, you’ll have two options:
 - Generate a scenario based on technical injects
 - Generate a scenario based on email injects, using AI to automatically generate email content
 
-It’s essential to understand that scenario creation for these entities relies on matching TTPs between OpenCTI and
+It’s essential to understand that a scenario creation for these entities relies on matching TTPs between OpenCTI and
 OpenBAS. You’ll need to ensure that the TTPs in both platforms are aligned. For instance, if your report contains the
 TTP T1059.001, a scenario can be created with an inject, provided OpenBAS also includes T1059.001.
 
