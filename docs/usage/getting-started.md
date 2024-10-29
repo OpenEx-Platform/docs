@@ -70,7 +70,7 @@ You can now schedule your [Simulation](simulation.md) by hitting the blue "Simul
 hit start.
 
 On time, a Simulation based on your Scenario template is generated. It is listed in your Scenario overview and in the
-Simulations menu. Fron there, you can follow the course of the Simulation and interact with it, for example to validate
+Simulations menu. From there, you can follow the course of the Simulation and interact with it, for example to validate
 manual expectations.
 
 During the course of the simulation, results are updated and can be consulted in the Simulation overview.
