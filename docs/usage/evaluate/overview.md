@@ -11,8 +11,8 @@ snapshot of your global security posture. Below is a breakdown of the various wi
 
 This section displays the count of different components within the platform, shown in two metrics:
 
-- The first metric represents the number of objects created over the last 180 days.
-- The second metric reflects the number of objects created in the last 30 days.
+- The first big metric inside a card represents the number of objects created over the last 180 days.
+- The second small metric inside a card reflects the number of objects created in the last 30 days.
 
 ![metric cards](assets/metric-cards.png)
 
