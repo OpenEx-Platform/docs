@@ -38,8 +38,8 @@ follow installation instructions. By default, Caldera is part of the OpenBAS sta
 
 ![Simulation Agents screen](assets/simulation_agents_screen.png)
 
-The [Caldera agent](inject-caldera.md) will allow you to play various technical events, based on the Mitre ATT&CK
-matrix.
+The [Caldera agent](inject-caldera.md) will allow you to play various technical events, based on the [Mitre ATT&CK
+matrix](https://attack.mitre.org/).
 
 ### Building your Scenario
 
