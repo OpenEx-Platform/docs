@@ -69,7 +69,7 @@ CTF [Challenges](components/challenges.md) to your injects.
 You can now schedule your [Simulation](simulation.md) by hitting the blue "Simulate now" button. Choose your moment and
 hit start.
 
-On time, a Simulation based on your Scenario template is generated. it is listed in your Scenario overview and in the
+On time, a Simulation based on your Scenario template is generated. It is listed in your Scenario overview and in the
 Simulations menu. Fron there, you can follow the course of the Simulation and interact with it, for example to validate
 manual expectations.
 
