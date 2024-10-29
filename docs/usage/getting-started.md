@@ -45,7 +45,7 @@ matrix.
 
 Once integrations is done, you are ready to create your first Scenario!
 
-[Scenarios](scenario.md) act as template for your Breach and Attack simulations. After establihing such a template, you
+[Scenarios](scenario.md) act as template for your Breach and Attack simulations. After establishing such a template, you
 will be able to schedule it as a one shot simulation, or as a recurring one.
 
 - First, go to the Scenarios menu and create a new one with the + button.
