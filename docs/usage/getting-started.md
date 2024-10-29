@@ -20,7 +20,7 @@ Here are some examples of use cases:
 
 ## Home screen
 
-The Home screen gives any visitor on the OpenBAS platform an outlook on the live of the platform as well as an overview
+The Home screen provides every OpenBAS platform visitor with a snapshot of the platform activity as well as an overview 
 of your global security posture. You can find more information in [this section](evaluate/overview.md).
 
 ## Your first Breach and Attack Simulation
