@@ -60,7 +60,7 @@ will be able to schedule it as a one shot simulation, or as a recurring one.
   checked through your integrations with your security systems.
 - Do not forget to define when the inject is played in the scenario chronology.
 
-Optionnaly, you can buff up your scenario by
+Optionally, you can enhance your scenario by
 adding [Documents](components/documents.md), [Media pressures](components/media_pressure.md), or even
 CTF [Challenges](components/challenges.md) to your injects.
 
