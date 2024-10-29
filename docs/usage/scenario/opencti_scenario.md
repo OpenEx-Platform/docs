@@ -31,7 +31,7 @@ However, it's important to review and potentially customize the scenario to ensu
 requirements. Additionally, you'll need to select appropriate [targets](../targets.md) for the injects within the
 scenario.
 
-Once you've finalized the scenario, you can schedule your simulation as you would for any other scenario. The overall
+Once you've finalized the scenario, you can schedule your simulation as you would do for any other scenarios. The overall
 results of the simulation will also be available directly within OpenCTI, providing insights into the threat context
 upon which the scenario is based.
 
