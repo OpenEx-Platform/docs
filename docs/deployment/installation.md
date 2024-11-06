@@ -163,8 +163,7 @@ You can deploy Caldera alongside OpenBAS to manage agent deployment and execute 
 Before running the `docker compose` command, the `caldera.yml` and `docker-compose.yml` file should be configured. By 
 default, the `docker-compose.yml` file is using environment variables available in the file `.env.sample`.
 
-You can either rename the file `.env.sample` in `.env` and put the expected values or just fill directly the 
-`docker-compose.yml` with the values corresponding to your environment.
+You can either rename the `.env.sample` file for `.env` and enter the required values, or directly update the `docker-compose.yml` file with the values specific to your environment.
 
 #### Caldera
 
