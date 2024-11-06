@@ -244,7 +244,7 @@ OpenBAS will use the red user.
 #### Installation of dependencies
 
 You have to install all the needed dependencies for the main application if you would like to play breach and attack 
-simulation scenarios. The example below if for Ubuntu:
+simulation scenarios. The example below is for Ubuntu:
 
 ```bash
 sudo apt install openjdk-22-jre
