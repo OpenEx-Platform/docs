@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1203,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../evaluate/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1398,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../opencti_scenario/" class="md-nav__link">
+      <a href="../scenario/opencti_scenario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2713,43 +2713,69 @@
 <p class="admonition-title">Under construction</p>
 <p>We are doing our best to complete this page. If you want to participate, don't hesitate to join the <a href="https://community.filigran.io">Filigran Community on Slack</a> or submit your pull request on the <a href="https://github.com/OpenBAS-Platform/docs">Github doc repository</a>.</p>
 </div>
-<p>This guide aims to give you a full overview of the OpenBAS features and workflows. The platform can be used in various contexts to handle Breach and Attack simulations at technical or strategical levels. OpenBAS has been designed as a part of the Filigran XTM suite and can be integrated with <a href="https://filigran.io/solutions/open-cti/">OpenCTI</a> to generate meaningful attack scenario based on real threat. OpenBAS is result-oriented with many dashboard helping you to evaluate you securoty posture given a defined context.</p>
-<p>Here are some examples of use cases:
-- Designing attack scenario based on real threat
-- Evaluate your security posture against technical simulations on endpoints
-- Enhance team skills by evaluating them during simulations along with your security systems
-- Organize Capture The Flag with multiple challenges
-- Conduct atomic testing</p>
+<p>This guide aims to give you a full overview of the OpenBAS features and workflows. The platform can be used in various
+contexts to handle Breach and Attack simulations at technical or strategical levels. OpenBAS has been designed as a part
+of the Filigran XTM suite and can be integrated with <a href="https://filigran.io/solutions/open-cti/">OpenCTI</a> to generate
+meaningful attack scenarios based on real threat. OpenBAS is result-oriented with many dashboards helping you to evaluate
+you security posture given a defined context.</p>
+<p>Here are some examples of use cases:</p>
+<ul>
+<li>Designing attack scenario based on real threat</li>
+<li>Evaluate your security posture against technical simulations on endpoints</li>
+<li>Enhance team skills by evaluating them during simulations along with your security systems</li>
+<li>Organize Capture The Flag with multiple challenges</li>
+<li>Conduct atomic testing</li>
+</ul>
 <h2 id="home-screen">Home screen</h2>
-<p>The Home screen gives any visitor on the OpenBAS platform an outlook on the live of the platform as well as an overview of your global security posture.</p>
+<p>The Home screen provides every OpenBAS platform visitor with a snapshot of the platform activity as well as an overview 
+of your global security posture. You can find more information in <a href="../evaluate/overview/">this section</a>.</p>
 <h2 id="your-first-breach-and-attack-simulation">Your first Breach and Attack Simulation</h2>
 <h3 id="importing-players-and-assets-to-play-with">Importing players and assets to play with</h3>
-<p>First, you need to import Players and Assets that will participate to the simulation and be targeted by technical or strategical events. To do so, you need to ...</p>
+<p>First, you need to import Players and Assets that will participate to the simulation and be targeted by technical or
+strategical events. To do so, you need to ...</p>
 <h3 id="integrate-with-simulation-agent-to-simulate-technical-events">Integrate with Simulation Agent to simulate technical events</h3>
-<p>If you want to simulate attack at a technical level, you will need to install a Simulation Agent that will play technical events on your imported assets. To do so, you can go to the dedicated panel from the top right button and follow installation instructions. By default, Caldera is part of the OpenBAS stack.</p>
+<p>If you want to simulate attack at a technical level, you will need to install a Simulation Agent that will play
+technical events on your imported assets. To do so, you can go to the dedicated panel from the top right button and
+follow installation instructions. By default, Caldera is part of the OpenBAS stack.</p>
 <p><a class="glightbox" href="../assets/simulation_agents_screen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simulation Agents screen" src="../assets/simulation_agents_screen.png" /></a></p>
-<p>The <a href="../inject-caldera/">Caldera agent</a> will allow you to play various technical events, based on the Mitre ATT&amp;CK matrix.</p>
+<p>The <a href="../inject-caldera/">Caldera agent</a> will allow you to play various technical events, based on the <a href="https://attack.mitre.org/">Mitre ATT&amp;CK
+matrix</a>.</p>
 <h3 id="building-your-scenario">Building your Scenario</h3>
-<p>Once integrations is done, you are ready to create your first Scenario! </p>
-<p><a href="../scenario/">Scenarios</a> act as template for your Breach and Attack simulations. After establihing such a template, you will be able to schedule it as a one shot simulation, or as a recurring one. </p>
+<p>Once integrations is done, you are ready to create your first Scenario!</p>
+<p><a href="../scenario/">Scenarios</a> act as template for your Breach and Attack simulations. After establishing such a template, you
+will be able to schedule it as a one shot simulation, or as a recurring one.</p>
 <ul>
 <li>First, go to the Scenarios menu and create a new one with the + button.</li>
-<li>Once done, define <a href="../teams_and_players_and_organizations/">Teams</a> that will be playing in this Scenario by going to the Definition/Teams tab</li>
-<li>Now go to the <a href="../injects/">Injects</a> tab and add some to build the serie of events that will define the core of your Scenario. If you want to stay strategical, you can select inject like "Send individual mails". If you want to go technical, you can select injects linked to attack pattern (Caldera integration allows you to play hundreds of them).</li>
-<li>Then, define <a href="../targets/">who or what will be targeted</a> by those injects, customize them, and define what is expected to happen. For example, you expect the targeted team to perform a specific action and the animation team will validated this expectation manually. Or, you expect the technical event to be prevented and it will be automatically checked through your integrations with your security systems.</li>
+<li>Once done, define <a href="../teams_and_players_and_organizations/">Teams</a> that will be playing in this Scenario by going to
+  the Definition/Teams tab</li>
+<li>Now go to the <a href="../injects/">Injects</a> tab and add some to build the serie of events that will define the core of your
+  Scenario. If you want to stay strategical, you can select inject like "Send individual mails". If you want to go
+  technical, you can select injects linked to attack pattern (Caldera integration allows you to play hundreds of them).</li>
+<li>Then, define <a href="../targets/">who or what will be targeted</a> by those injects, customize them, and define what is expected
+  to happen. For example, you expect the targeted team to perform a specific action and the animation team will
+  validated this expectation manually. Or, you expect the technical event to be prevented and it will be automatically
+  checked through your integrations with your security systems.</li>
 <li>Do not forget to define when the inject is played in the scenario chronology.</li>
 </ul>
-<p>Optionnaly, you can buff up your scenario by adding <a href="../components/documents/">Documents</a>, <a href="../components/media_pressure/">Media pressures</a>, or even CTF <a href="../components/challenges/">Challenges</a> to your injects.</p>
+<p>Optionally, you can enhance your scenario by
+adding <a href="../components/documents/">Documents</a>, <a href="../components/media_pressure/">Media pressures</a>, or even
+CTF <a href="../components/challenges/">Challenges</a> to your injects.</p>
 <h3 id="play-the-simulation">Play the simulation</h3>
-<p>You can now schedule your <a href="../simulation/">Simulation</a> by hitting the blue "Simulate now" button. Choose your moment and hit start.</p>
-<p>On time, a Simulation based on your Scenario template is generated. it is listed in your Scenario overview and in the Simulations menu. Fron there, you can follow the course of the Simulation and interact with it, for example to validate manual expectations.</p>
+<p>You can now schedule your <a href="../simulation/">Simulation</a> by hitting the blue "Simulate now" button. Choose your moment and
+hit start.</p>
+<p>On time, a Simulation based on your Scenario template is generated. It is listed in your Scenario overview and in the
+Simulations menu. From there, you can follow the course of the Simulation and interact with it, for example to validate
+manual expectations.</p>
 <p>During the course of the simulation, results are updated and can be consulted in the Simulation overview.</p>
 <h3 id="evaluate-your-security-posture">Evaluate your security posture</h3>
-<p>Results in OpenBAS are based on expectations' results that are linked to injects played during Simulations. It is then important to manually validate expectations that need it.</p>
-<p>Results are broken down by "Prevention", "Detection" and "Human response" metrics.
-- Prevention displays your ability to prevent the scenario's technical events to be completed
-- Detection displays your ability to detect the scenario's technical events
-- HUman response displays how well players and teams react as expected facing the scenario's events.</p>
+<p>Results in OpenBAS are based on expectations' results that are linked to injects played during Simulations. It is then
+important to manually validate expectations that need it.</p>
+<p>Results are broken down by "Prevention", "Detection" and "Human response" metrics.</p>
+<ul>
+<li>Prevention displays your ability to prevent the scenario's technical events to be completed</li>
+<li>Detection displays your ability to detect the scenario's technical events</li>
+<li>HUman response displays how well players and teams react as expected facing the scenario's events.</li>
+</ul>
 
 
 
@@ -2772,7 +2798,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-08-05T14:34:38+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-08-05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-29T16:14:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-29</span>
   </span>
 
     
@@ -2986,7 +3012,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.footer", "navigation.expand", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

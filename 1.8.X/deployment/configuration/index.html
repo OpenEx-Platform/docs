@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1319,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/overview/" class="md-nav__link">
+      <a href="../../usage/evaluate/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1514,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/opencti_scenario/" class="md-nav__link">
+      <a href="../../usage/scenario/opencti_scenario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2939,7 +2939,9 @@
 
 
 <h1 id="configuration">Configuration</h1>
-<p>The purpose of this section is to learn how to configure OpenBAS to have it tailored for your production and development needs. It is possible to check all default parameters implemented in the platform in the <a href="https://github.com/OpenBAS-Platform/openbas/blob/master/openbas-api/src/main/resources/application.properties"><code>application.properties</code> file</a>.</p>
+<p>The purpose of this section is to learn how to configure OpenBAS to have it tailored for your production and development
+needs. It is possible to check all default parameters implemented in the platform in the <a href="https://github.com/OpenBAS-Platform/openbas/blob/master/openbas-api/src/main/resources/application.properties">
+<code>application.properties</code> file</a>.</p>
 <p>Here are the configuration keys, for both containers (environment variables) and manual deployment.</p>
 <div class="admonition note">
 <p class="admonition-title">Parameters equivalence</p>
@@ -3325,10 +3327,23 @@
 <td style="text-align: left;">us-east-1</td>
 <td style="text-align: left;">Region of the S3 bucket if you are using AWS. This parameter value can be omitted if you use Minio as an S3 Bucket Service.</td>
 </tr>
+<tr>
+<td style="text-align: left;">openbas.s3.use-aws-role</td>
+<td style="text-align: left;">OPENBAS_S3_USE-AWS-ROLE</td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Whether or not we want to get the AWS role using AWS Security Token Service</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.s3.sts-endpoint</td>
+<td style="text-align: left;">OPENBAS_S3_STS-ENDPOINT</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>experimental</code> This parameter is optional. If it stays empty, it will use either the AWS legacy STS endpoint (https://sts.amazonaws.com) or the regional one using AWS_REGION if the environment variable is set (you can learn more about it <a href="https://docs.aws.amazon.com/general/latest/gr/sts.html#sts_region">here</a>). Otherwise, if you want to use your own custom implementation of STS endpoints, you can set it here.</td>
+</tr>
 </tbody>
 </table>
 <h4 id="agents-executors">Agents (executors)</h4>
-<p>To be able to use the power of the OpenBAS platform on endpoints, you need at least one <strong>neutral executor</strong> that will be in charge of executing implants as detached processes. Implants will then execute payloads.</p>
+<p>To be able to use the power of the OpenBAS platform on endpoints, you need at least one <strong>neutral executor</strong> that will
+be in charge of executing implants as detached processes. Implants will then execute payloads.</p>
 <h5 id="openbas-agent">OpenBAS Agent</h5>
 <p>The OpenBAS agent is enabled by default and cannot be disabled. It is available for:</p>
 <ul>
@@ -3339,7 +3354,8 @@
 <h5 id="other-executors">Other executors</h5>
 <p>To know more about other available executors, please refer to the <a href="../executors/">executors documentation</a></p>
 <h4 id="mail-services">Mail services</h4>
-<p>For the associated mailbox, for the moment the platform only relies on IMAP / SMTP protocols, we are actively developing integrations with APIs such as O365 and Google Apps.</p>
+<p>For the associated mailbox, for the moment the platform only relies on IMAP / SMTP protocols, we are actively developing
+integrations with APIs such as O365 and Google Apps.</p>
 <h5 id="smtp">SMTP</h5>
 <table>
 <thead>
@@ -3413,6 +3429,59 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Note :</strong> Example with Gmail</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Environment variable</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">spring.mail.host</td>
+<td style="text-align: left;">SPRING_MAIL_HOST</td>
+<td style="text-align: left;">smtp.gmail.com</td>
+<td style="text-align: left;">Gmail SMTP server hostname</td>
+</tr>
+<tr>
+<td style="text-align: left;">spring.mail.port</td>
+<td style="text-align: left;">SPRING_MAIL_PORT</td>
+<td style="text-align: left;">587</td>
+<td style="text-align: left;">Gmail SMTP server port (TLS)</td>
+</tr>
+<tr>
+<td style="text-align: left;">spring.mail.username</td>
+<td style="text-align: left;">SPRING_MAIL_USERNAME</td>
+<td style="text-align: left;">username@mail.com</td>
+<td style="text-align: left;">Gmail address</td>
+</tr>
+<tr>
+<td style="text-align: left;">spring.mail.password</td>
+<td style="text-align: left;">SPRING_MAIL_PASSWORD</td>
+<td style="text-align: left;">app password</td>
+<td style="text-align: left;">Gmail App-specific password</td>
+</tr>
+<tr>
+<td style="text-align: left;">spring.mail.properties.mail.smtp.auth</td>
+<td style="text-align: left;">SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">Enable SMTP authentication</td>
+</tr>
+<tr>
+<td style="text-align: left;">spring.mail.properties.mail.smtp.starttls.enable</td>
+<td style="text-align: left;">SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">Enable SMTP STARTTLS</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>Important</strong>: If you are using two-factor authentication on your Gmail account, an app-specific password is
+required. You can find a guide <a href="https://support.google.com/accounts/answer/185833">here</a>.</p>
 <h5 id="imap">IMAP</h5>
 <table>
 <thead>
@@ -3504,6 +3573,77 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Note :</strong> Example with Gmail</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Environment variable</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.enabled</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_ENABLED</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">Enable IMAP for Gmail</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.host</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_HOST</td>
+<td style="text-align: left;">imap.gmail.com</td>
+<td style="text-align: left;">Gmail IMAP server hostname</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.port</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_PORT</td>
+<td style="text-align: left;">993</td>
+<td style="text-align: left;">Gmail IMAP port (SSL)</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.username</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_USERNAME</td>
+<td style="text-align: left;">username@mail.com</td>
+<td style="text-align: left;">Gmail address</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.password</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_PASSWORD</td>
+<td style="text-align: left;">app password</td>
+<td style="text-align: left;">Gmail App-specific password</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.ssl.enable</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_SSL_ENABLE</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">Enable IMAP SSL</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.ssl.trust</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_SSL_TRUST</td>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">Trust unverified certificates</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.auth</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_AUTH</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">Enable IMAP authentication</td>
+</tr>
+<tr>
+<td style="text-align: left;">openbas.mail.imap.sent</td>
+<td style="text-align: left;">OPENBAS_MAIL_IMAP_SENT</td>
+<td style="text-align: left;">[Gmail]/Sent Mail</td>
+<td style="text-align: left;">IMAP sent directory to synchronize from</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>Important</strong>: If you are using two-factor authentication on your Gmail account, an app-specific password is
+required. You can find a guide <a href="https://support.google.com/accounts/answer/185833">here</a>.</p>
 <h4 id="ai-service">AI Service</h4>
 <div class="admonition note">
 <p class="admonition-title">AI deployment and cloud services</p>
@@ -3584,7 +3724,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-24T13:49:16+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-07T17:51:09+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-07</span>
   </span>
 
     
@@ -3622,14 +3762,14 @@
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
         </a>
       
+        <a href="https://github.com/RomuDeuxfois" class="md-author" title="@RomuDeuxfois">
+          
+          <img src="https://avatars.githubusercontent.com/u/53513584?v=4&size=72" alt="RomuDeuxfois">
+        </a>
+      
         <a href="https://github.com/damgouj" class="md-author" title="@damgouj">
           
           <img src="https://avatars.githubusercontent.com/u/179485775?v=4&size=72" alt="damgouj">
-        </a>
-      
-        <a href="https://github.com/SamuelHassine" class="md-author" title="@SamuelHassine">
-          
-          <img src="https://avatars.githubusercontent.com/u/1334279?v=4&size=72" alt="SamuelHassine">
         </a>
       
       
@@ -3798,7 +3938,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.footer", "navigation.expand", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
