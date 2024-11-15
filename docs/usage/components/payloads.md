@@ -93,7 +93,7 @@ manually or by another process.
 DNS resolution payloads attempts to resolve hostnames to associated IP address(es).
 
 The goal of DNS resolution is to test if specific hostnames resolve to IP addresses correctly, helping assess network 
-accessibility, detect issues, and simulate potentia![payload-creation-command.png](assets%2Fpayload-creation-command.png)l attacker behavior.
+accessibility, detect issues, and simulate potential attacker behavior.
 
 | Property         | Description                                      |
 |------------------|--------------------------------------------------|
