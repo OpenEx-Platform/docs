@@ -16,7 +16,7 @@ external services for two purposes:
 
 ### 🛡️ Detection & Prevention (SIEM, XDR, EDR, NDR)
 
-Those collectors are the most import ones as they are used to evaluate the security posture (response to injects) from
+Those collectors are the most important ones as they are used to evaluate the security posture (response to injects) from
 various detection and response systems and fulfill expectations for detection and prevention.
 
 #### Detection & Prevention with EDR
