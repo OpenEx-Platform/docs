@@ -163,7 +163,7 @@ The user can also replay all the tests in the list. An icon similar to the one i
 
 ## Conditional execution of injects
 
-It is possible to add conditions to an inject. It will still be played at a specific time but only if the conditions set are met. Conditions are usually that an expectation is met or not but can also be about the success (or not) of the execution. There are several ways to do that.
+You can add conditions to an inject, ensuring it is triggered at a specific time only if the specified conditions are met. These conditions typically relate to whether an expectation is fulfilled or not, but they can also pertain to the success or failure of an execution. There are several methods to achieve this.
 
 ### Using the update form
 
@@ -171,13 +171,13 @@ You can set conditions when updating an inject. In the inject update form, there
 
 ![Logical chains form](assets/inject-chaining.png)
 
-As you can see, you can set a Parent and several Childrens. A parent means the current inject will be executed only if the conditions set on the parent are met at the time of execution. A children will be executed at the time of execution only if the conditions on the current inject are met. 
+As you can see, you can assign a Parent and multiple Children. A Parent indicates that the current inject will only execute if the conditions set on the Parent are met at the time of execution. Similarly, a Child will execute at the specified time only if the conditions set on the current inject are satisfied. 
 
-The conditions you can set are the expectations of the inject as well as whether or not the execution went well or not. You can choose the expectation and the Success/Fail value by clinking on them.
+The conditions you can set include the expectations for the inject and whether its execution was successful or not. You can select the desired expectation and Success/Fail status by clicking on them.
 
 ![Modifying chains value form](assets/inject-chaining-value.png)
 
-There is also the possibility to change if all the conditions must be met or just one by clicking on the small OR/AND cards. Note that they are all linked and you cannot have different values on those.
+You can also toggle whether all conditions must be met or just one by clicking on the small OR/AND cards. Note that these settings are interconnected, so you cannot assign different values to them
 
 ### Using the timeline
 
@@ -185,4 +185,4 @@ You also have the possibility to quickly create conditions between injects. To d
 
 ![Creating chains in the timeline](assets/inject-chaining-timeline.gif)
 
-The links created this way will have a default expectation set to "Execution is Success" and have to be changed using the update form of the injects. As you can see, you can also reposition links between injects or just delete them by repositionning them onto nothing.
+The links created in this way will default to an expectation of "Execution is Success" and must be updated using the injects' update form. Additionally, you can reposition links between injects or remove them entirely by dragging them to an empty space.

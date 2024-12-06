@@ -12,7 +12,7 @@ Injects can be technical, emulating action attackers might take on an endpoint, 
 
 ![Email inject definition form](assets/email_inject_definition.png)
 
-![Chaining inject definition form](assets/inject-chaining.png)
+![Inject chaining definition form](assets/inject-chaining.png)
 
 ## Expectations
 
