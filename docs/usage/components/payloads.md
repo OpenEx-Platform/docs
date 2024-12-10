@@ -1,9 +1,5 @@
 # Payloads
 
-!!! tip "Under construction"
-
-    We are doing our best to complete this page. If you want to participate, don't hesitate to join the [Filigran Community on Slack](https://community.filigran.io) or submit your pull request on the [Github doc repository](https://github.com/OpenBAS-Platform/docs).
-
 In OpenBAS, you can create custom payloads based on different types to create new injects.
 
 Payloads enhance the platform, allowing you to further customize your scenarios.
@@ -29,17 +25,18 @@ Once completed, your new payload will appear in the payload list.
 
 ### Common Payload properties
 
-| Property         | Description                                                         |
-|------------------|---------------------------------------------------------------------|
-| Name             | Payload name                                                        |
-| Platforms        | Compatible platforms (ex. Windows, Linux, MacOS)                    |
-| Description      | Payload description                                                 |
-| Prerequisites    | Prerequisites required to execute the command                       |
-| Cleanup executor | Executor for cleaning commands                                      |
-| Cleanup command  | Cleanup command to remove or reset changes made                     |
-| Attack patterns  | Command-related attack patterns                                     |
-| Tags             | Tags                                                                |
-| Arguments        | Arguments for the cleanup, prerequisites and potential command line |
+| Property         | Description                                                                                                                                                                                                                                                                                 |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name             | Payload name                                                                                                                                                                                                                                                                                |
+| Platforms        | Compatible platforms (ex. Windows, Linux, MacOS)                                                                                                                                                                                                                                            |
+| Architecture     | Architectures where payloads can be executed (e.g., x86_64, arm64, or in any case (all architectures)). <br/> ⚠️ **Important**: `This property can only be modified in the case of command-line and executable payloads. For other cases, the payload can be executed on any architecture.` |
+| Description      | Payload description                                                                                                                                                                                                                                                                         |
+| Prerequisites    | Prerequisites required to execute the command                                                                                                                                                                                                                                               |
+| Cleanup executor | Executor for cleaning commands                                                                                                                                                                                                                                                              |
+| Cleanup command  | Cleanup command to remove or reset changes made                                                                                                                                                                                                                                             |
+| Attack patterns  | Command-related attack patterns                                                                                                                                                                                                                                                             |
+| Tags             | Tags                                                                                                                                                                                                                                                                                        |
+| Arguments        | Arguments for the cleanup, prerequisites and potential command line                                                                                                                                                                                                                         |
 
 #### Prerequisites in depth
 
@@ -73,7 +70,6 @@ Executables can perform a variety of functions, from establishing a backdoor to 
 
 | Property         | Description                                      |
 |------------------|--------------------------------------------------|
-| Architecture     | Compatible architecture (ex. x86_64, arm64)      |
 | Executable file  | File to execute                                  |
 
 #### File Drop
