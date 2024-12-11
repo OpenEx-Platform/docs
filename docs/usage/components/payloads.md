@@ -29,7 +29,6 @@ Once completed, your new payload will appear in the payload list.
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name             | Payload name                                                                                                                                                                                                                                                                                |
 | Platforms        | Compatible platforms (ex. Windows, Linux, MacOS)                                                                                                                                                                                                                                            |
-| Architecture     | Architectures where payloads can be executed (e.g., x86_64, arm64, or in any case (all architectures)). <br/> ⚠️ **Important**: `This property can only be modified in the case of command-line and executable payloads. For other cases, the payload can be executed on any architecture.` |
 | Description      | Payload description                                                                                                                                                                                                                                                                         |
 | Prerequisites    | Prerequisites required to execute the command                                                                                                                                                                                                                                               |
 | Cleanup executor | Executor for cleaning commands                                                                                                                                                                                                                                                              |
@@ -56,10 +55,11 @@ This payload type executes commands directly on the command line interface (CLI)
 Command Line payloads are used for remote command execution to simulate common attacker actions like privilege 
 escalation or data exfiltration.
 
-| Property         | Description                                      |
-|------------------|--------------------------------------------------|
-| Command executor | Executor for command to execute                  |
-| Command          | Command to execute                               |
+| Property         | Description                                                                           |
+|------------------|---------------------------------------------------------------------------------------|
+| Architecture     | Architecture in which the command can be executed (x86_64, arm64, all architectures)  |
+| Command executor | Executor for command to execute                                                       |
+| Command          | Command to execute                                                                    |
 
 #### Executable
 
@@ -68,9 +68,10 @@ as an independent process.
 
 Executables can perform a variety of functions, from establishing a backdoor to running complex scripts (mimic malware).
 
-| Property         | Description                                      |
-|------------------|--------------------------------------------------|
-| Executable file  | File to execute                                  |
+| Property         | Description                                                            |
+|------------------|------------------------------------------------------------------------|
+| Architecture     | Architecture in which the command can be executed (ex. x86_64, arm64)  |
+| Executable file  | File to execute                                                        |
 
 #### File Drop
 
