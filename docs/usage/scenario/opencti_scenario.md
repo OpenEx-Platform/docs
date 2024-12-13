@@ -9,6 +9,9 @@ This integration works across multiple entities:
 - Reports
 - Grouping
 - Incident Response
+- Malware
+- Campaings
+- Intrusion
 - Request For Information
 - Request For Takedown
 
