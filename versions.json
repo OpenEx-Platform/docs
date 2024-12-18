@@ -2,14 +2,14 @@
   {
     "version": "1.10.X",
     "title": "1.10.X",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "1.9.X",
     "title": "1.9.X",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "1.8.X",
