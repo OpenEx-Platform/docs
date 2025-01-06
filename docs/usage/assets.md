@@ -39,6 +39,7 @@ Assets can be imported with the help of specific [Collectors](collectors.md), li
 ![Example of list of Assets](assets/assets_list.png)
 
 By clicking on an endpoint, you will be able to access its details :
+
 ![Overview endpoint](assets/overview_endpoint.png)
 
 ## Asset groups
