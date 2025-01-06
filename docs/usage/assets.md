@@ -31,8 +31,8 @@ interconnectivity of digital ecosystems. Below is a non-exhaustive list of termi
   endpoints include smart thermostats, cameras, environmental sensors, smart watches, and health tracking devices, among
   others.
 
-When accessing the Endpoints pages, you see the list of all endpoints imported in your platform. Here, users can create
-and manage details specific to each endpoint.
+When accessing the Endpoints pages, you see the list of all endpoints imported in your platform. Here, users can manage 
+details specific to each endpoint.
 
 Assets can be imported with the help of specific [Collectors](collectors.md), like Microsoft Entra.
 
