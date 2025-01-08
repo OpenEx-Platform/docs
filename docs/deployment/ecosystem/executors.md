@@ -4,11 +4,11 @@
 
 To be able to use the power of the OpenBAS platform on endpoints, you need at least one **neutral executor** that will be in charge of executing implants as detached processes. Implants will then execute payloads.
 
-![Architecture](assets/architecture.png)
+![Architecture](../assets/architecture.png)
 
 ## OpenBAS Agent
 
-[More informations here](https://docs.openbas.io/latest/administration/openbas-agent)
+[More informations here](../../usage/openbas-agent.md)
 
 ## Tanium Agent
 
@@ -18,7 +18,7 @@ The Tanium agent can be leveraged to execute implants as detached processes that
 
 First of all, we are providing [2 Tanium packages](https://github.com/OpenBAS-Platform/openbas/blob/master/openbas-framework/src/main/java/io/openbas/executors/tanium/openbas-tanium-packages.json) to be imported in the Tanium platform.
 
-![Tanium Packages](assets/tanium-packages.png)
+![Tanium Packages](../assets/tanium-packages.png)
 
 !!! warning "Tanium package configuration"
 
@@ -49,11 +49,11 @@ To use the Tanium executor, just fill the following configuration.
 
 Once enabled, you should see Tanium available in your `Install agents` section
 
-![Agents](assets/agents.png)
+![Agents](../assets/agents.png)
 
 Also, the assets in the selected computer groups should now be available in the endpoints section in OpenBAS:
 
-![Endpoints](assets/tanium-endpoints.png)
+![Endpoints](../assets/tanium-endpoints.png)
 
 NB : An Asset can only have one Tanium agent installed thanks to an unicity with hostname and IP parameters. 
 If you try to install again a Tanium agent on a platform, it will overwrite the actual one and you will always 
@@ -132,11 +132,11 @@ Then, just change the OpenBAS configuration as follow:
 
 Once enabled, you should see Caldera available in your `Install agents` section:
 
-![Agents](assets/agents.png)
+![Agents](../assets/agents.png)
 
 OpenBAS has built-in instruction if you want command line examples to deploy the agent on one endpoint.
 
-![Caldera deploy agents](assets/caldera-deploy-agent.png)
+![Caldera deploy agents](../assets/caldera-deploy-agent.png)
 
 !!! warning "Caldera AV detection"
     
@@ -148,7 +148,7 @@ OpenBAS has built-in instruction if you want command line examples to deploy the
 
 All assets with a proper Caldera agent installed using the OpenBAS provided command line (then persistent) should now be available in the OpenBAS endpoints list.
 
-![Endpoints](assets/caldera-endpoints.png)
+![Endpoints](../assets/caldera-endpoints.png)
 
 NB : An Asset can only have one Caldera agent installed thanks to an unicity with hostname and IP parameters.
 If you try to install again a Caldera agent on a platform, it will overwrite the actual one and you will always
