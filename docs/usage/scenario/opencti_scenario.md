@@ -17,7 +17,7 @@ This integration works across multiple entities:
 
 ![simulate button](assets/simulate-btn.png)
 
-When you click the "Simulate" button, a form will appear with the following fields:
+When you click on the "Simulate" button, a form will appear with the following fields:
 
 | Property                                                         | Description                                                   |
 |------------------------------------------------------------------|---------------------------------------------------------------|
