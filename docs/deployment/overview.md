@@ -15,7 +15,7 @@ The platform is the central part of the OpenBAS platform, allowing users to conf
 ### Neutral agents / executors
 
 Executors are embedded into the platform but you should configure at least one.
-It is the system that will be used to execute local injectors on endpoints.
+This system is responsible for executing local injectors on endpoints.
 
 We developed a home-made XTM agent, and we support Caldera, Tanium and Crowdstrike. Others will be added in the near future.
 

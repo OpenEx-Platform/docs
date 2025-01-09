@@ -8,7 +8,7 @@ To be able to use the power of the OpenBAS platform on endpoints, you need at le
 
 ## OpenBAS Agent
 
-[More informations here](../../usage/openbas-agent.md)
+[More information here](../../usage/openbas-agent.md)
 
 ## Tanium Agent
 
