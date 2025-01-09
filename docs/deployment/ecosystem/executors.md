@@ -24,7 +24,7 @@ First of all, we are providing [2 Tanium packages](https://github.com/OpenBAS-Pl
 
     Because OpenBAS should run implants as detached processed, you must uncheck the box "Launch this package command in a process group" in the package configuration:
 
-    ![Tanium Package](assets/tanium-package.png)
+    ![Tanium Package](../assets/tanium-package.png)
 
 Once configured and imported, retrieve the package IDs from the URL `ui/console/packages/XXXXX/preview`.
 
@@ -142,7 +142,7 @@ OpenBAS has built-in instruction if you want command line examples to deploy the
     
     By default, the Caldera agent "Sandcat" is detected and blocked by antivirus. Here, we are using Caldera as a neutral executor that will execute implants that will execute payloads, so you need to add the proper AV exclusions as instructed in the OpenBAS screen.
 
-    ![Caldera AV exclusion](assets/caldera-av.png)
+    ![Caldera AV exclusion](../assets/caldera-av.png)
 
 #### Checks
 

@@ -111,4 +111,4 @@ The collector status can be displayed in the dedicated section of the platform a
 
 !!! bug "Problem"
 
-    If you encounter problems deploying OpenBAS or collectors, you can consult the [troubleshooting page](troubleshooting.md) page.
+    If you encounter problems deploying OpenBAS or collectors, you can consult the [troubleshooting page](../troubleshooting.md) page.

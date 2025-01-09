@@ -131,4 +131,4 @@ The injector status can be displayed in the dedicated section of the platform av
 
 !!! bug "Problem"
 
-    If you encounter problems deploying OpenBAS or injectors, you can consult the [troubleshooting page](troubleshooting.md) page.
+    If you encounter problems deploying OpenBAS or injectors, you can consult the [troubleshooting page](../troubleshooting.md) page.
