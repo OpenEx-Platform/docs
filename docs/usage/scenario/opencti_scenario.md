@@ -60,3 +60,16 @@ results of the simulation will also be available directly within OpenCTI, provid
 upon which the scenario is based.
 
 ![Simulate results](assets/simulate-result.png)
+
+Exemple of a scenario generated on OpenBAS is:
+
+![Scenario OpenBAS](assets/scenario-openbas.png)
+
+Here, you can see the list of injects generated for ttp existents on openBAS, exemples of injects placeholder and existents :
+
+![Scenario OpenBAS](assets/inject-scenario-openbas.png)
+
+![Scenario OpenBAS](assets/inject-placeholder.png)
+
+![Scenario OpenBAS](assets/inject-ttp.png)
+
