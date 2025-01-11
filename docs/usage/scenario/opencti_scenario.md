@@ -45,7 +45,7 @@ TTP T1059.001, a scenario can be created with an inject, provided OpenBAS also i
 
 If these TTPs are not supported by OpenBAS, you will receive an alert listing the uncovered TTPs.
 
-![ttps not covered obas](assets/octi-ttp-not-covered.png)
+![ttps not covered obas](assets/octi-ttps-no-covered.png)
 
 When generating a scenario from OpenCTI, a scenario is created and can be accessed from the scenarios screen. The
 scenario name will include a reference to OpenCTI, indicating its origin. This scenario will automatically contain
