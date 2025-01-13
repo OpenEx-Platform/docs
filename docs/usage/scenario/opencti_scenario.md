@@ -41,35 +41,31 @@ If you choose the "Technical" (payloads) simulation type, you will also need to 
 
 It’s essential to understand that a scenario creation for these entities relies on matching TTPs between OpenCTI and
 OpenBAS. You’ll need to ensure that the TTPs in both platforms are aligned. For instance, if your report contains the
-TTP T1059.001, a scenario can be created with an inject, provided OpenBAS also includes T1059.001.
+TTP T1059.001, a scenario can be created with an inject, provided OpenBAS also includes T1059.001. Otherwise, an 
+inject with a placeholder will be created instead for this TTP.
 
 If these TTPs are not supported by OpenBAS, you will receive an alert listing the uncovered TTPs.
 
 ![ttps not covered obas](assets/octi-ttps-no-covered.png)
 
-When generating a scenario from OpenCTI, a scenario is created and can be accessed from the scenarios screen. The
+When generating a scenario from OpenCTI, a scenario is created on OpenBas and can be accessed from the scenarios screen. The
 scenario name will include a reference to OpenCTI, indicating its origin. This scenario will automatically contain
 relevant sequences of injects based on the threat context identified in OpenCTI.
+
+![Scenario OpenBAS](assets/scenario-openbas.png)
+
+![Scenario OpenBAS](assets/inject-scenario-openbas.png)
+
+![Scenario OpenBAS](assets/inject-placeholder.png)
 
 However, it's important to review and potentially customize the scenario to ensure it meets your organization's specific
 requirements. Additionally, you'll need to select appropriate [targets](../targets.md) for the injects within the
 scenario.
+
+![Scenario OpenBAS](assets/inject-ttp.png)
 
 Once you've finalized the scenario, you can schedule your simulation as you would do for any other scenarios. The overall
 results of the simulation will also be available directly within OpenCTI, providing insights into the threat context
 upon which the scenario is based.
 
 ![Simulate results](assets/simulate-result.png)
-
-Exemple of a scenario generated on OpenBAS is:
-
-![Scenario OpenBAS](assets/scenario-openbas.png)
-
-Here, you can see the list of injects generated for ttp existents on openBAS, exemples of injects placeholder and existents :
-
-![Scenario OpenBAS](assets/inject-scenario-openbas.png)
-
-![Scenario OpenBAS](assets/inject-placeholder.png)
-
-![Scenario OpenBAS](assets/inject-ttp.png)
-
