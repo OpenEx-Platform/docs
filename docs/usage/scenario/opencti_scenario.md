@@ -48,7 +48,7 @@ If these TTPs are not supported by OpenBAS, you will receive an alert listing th
 
 ![ttps not covered obas](assets/octi-ttps-no-covered.png)
 
-When generating a scenario from OpenCTI, a scenario is created on OpenBas and can be accessed from the scenarios screen. The
+When generating a scenario from OpenCTI, a scenario is created in OpenBas and can be accessed from the scenarios screen. The
 scenario name will include a reference to OpenCTI, indicating its origin. This scenario will automatically contain
 relevant sequences of injects based on the threat context identified in OpenCTI.
 
