@@ -29,7 +29,7 @@ relevant sequences of injects based on the threat context identified in OpenCTI.
 
 However, it's important to review and potentially customize the scenario to ensure it meets your organization's specific
 requirements. Additionally, you'll need to select appropriate [targets](../targets.md) for the injects within the
-scenario.
+scenario. You can also configure default asset groups for the scenarios created from OpenCTI using the [Default Asset Groups](../default_asset_rules.md) page.
 
 Once you've finalized the scenario, you can schedule your simulation as you would do for any other scenarios. The overall
 results of the simulation will also be available directly within OpenCTI, providing insights into the threat context
