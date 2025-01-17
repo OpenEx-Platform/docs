@@ -143,7 +143,7 @@ nav:
       - Generating Scenario from OpenCTI: usage/scenario/opencti_scenario.md
       - Importing injects into a Scenario: usage/scenario_import.md
       - Assets: usage/assets.md
-      - Teams, Players and Organizations: usage/teams_and_players_and_organizations.md
+      - People: usage/people.md
       - Components:
         - Documents: usage/components/documents.md
         - Custom variables: usage/components/variables.md
@@ -151,7 +151,7 @@ nav:
         - Media pressure: usage/components/media_pressure.md
         - Challenges: usage/components/challenges.md
         - Lessons: usage/components/lessons.md
-        - Payloads: usage/components/payloads.md
+      - Payloads: usage/payloads/payloads.md
     - Share and export:
       - Simulations: usage/simulation_reports.md
     - Improve your security posture:
