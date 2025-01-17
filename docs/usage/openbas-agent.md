@@ -33,7 +33,7 @@ MacOS
 
 Windows
 
-  - Requirement → powershell 7 or higher, admin user, access to the openbas instance used
+  - Requirement → Powershell "run as administrator", access to the openbas instance used. If installation failed, try with Powershell 7 or higher.
   - Compatibility → All major Windows versions
   - Installation → Create a service with name openbas-agent ("Install Windows Agent")
   - Verification command line → `Get-Service -Name "OBASAgentService"`
