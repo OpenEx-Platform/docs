@@ -4,7 +4,7 @@ OpenBAS provides a REST API, allowing users to perform various actions programma
 
 ## Authentication
 
-Access to the OpenBAS API requires authentication using standard authentication mechanisms. For authentication, users need to include the following headers in their API requests:
+Accessing the OpenBAS API requires authentication through standard mechanisms. To authenticate, users must include the following headers in their API requests:
 
 
 ```html
