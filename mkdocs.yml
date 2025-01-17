@@ -147,7 +147,6 @@ nav:
       - Components:
         - Documents: usage/components/documents.md
         - Custom variables: usage/components/variables.md
-        - Personas: usage/components/personas.md
         - Channels: usage/components/channels.md
         - Media pressure: usage/components/media_pressure.md
         - Challenges: usage/components/challenges.md
