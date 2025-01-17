@@ -2,7 +2,8 @@
 
 ## Introduction
 
-To be able to use the power of the OpenBAS platform on endpoints, you need at least one **neutral executor** that will be in charge of executing implants as detached processes. Implants will then execute payloads.
+To be able to use the power of the OpenBAS platform on endpoints, you need at least one **neutral executor** that will
+be in charge of executing implants as detached processes. Implants will then execute payloads.
 
 ![Architecture](../assets/architecture.png)
 
@@ -12,11 +13,14 @@ To be able to use the power of the OpenBAS platform on endpoints, you need at le
 
 ## Tanium Agent
 
-The Tanium agent can be leveraged to execute implants as detached processes that will the execute payloads according to the [OpenBAS architecture](https://docs.openbas.io/latest/deployment/overview).
+The Tanium agent can be leveraged to execute implants as detached processes that will the execute payloads according to
+the [OpenBAS architecture](https://docs.openbas.io/latest/deployment/overview).
 
 ### Configure the Tanium Platform
 
-First of all, we are providing [2 Tanium packages](https://github.com/OpenBAS-Platform/openbas/blob/master/openbas-framework/src/main/java/io/openbas/executors/tanium/openbas-tanium-packages.json) to be imported in the Tanium platform.
+First of all, we are
+providing [2 Tanium packages](https://github.com/OpenBAS-Platform/openbas/blob/0978bf1e3c9ff92dfa8ac5e866ae7725cfb428ed/openbas-api/src/main/java/io/openbas/executors/tanium/openbas-tanium-packages.json)
+to be imported in the Tanium platform.
 
 ![Tanium Packages](../assets/tanium-packages.png)
 
@@ -32,14 +36,15 @@ Once configured and imported, retrieve the package IDs from the URL `ui/console/
 
 To use the Tanium executor, just fill the following configuration.
 
-| Parameter                          | Environment variable               | Default value | Description                                     |
-|:-----------------------------------|:-----------------------------------|:--------------|:------------------------------------------------|
-| executor.tanium.enable             | EXECUTOR_TANIUM_ENABLE             | `false`       | Enable the Tanium executor                      |
-| executor.tanium.url                | EXECUTOR_TANIUM_URL                |               | Tanium URL                                      |
-| executor.tanium.api-key            | EXECUTOR_TANIUM_API-KEY            |               | Tanium API key                                  |
-| executor.tanium.computer-group-id  | EXECUTOR_TANIUM_COMPUTER_GROUP_ID  |               | Tanium Computer Group to be used in simulations |
-| executor.tanium.windows-package-id | EXECUTOR_TANIUM_WINDOWS_PACKAGE_ID |               | ID of the OpenBAS Tanium Windows package        |
-| executor.tanium.unix-package-id    | EXECUTOR_TANIUM_UNIX_PACKAGE_ID    |               | ID of the OpenBAS Tanium Unix package           |
+| Parameter                          | Environment variable               | Default value                          | Description                                     |
+|:-----------------------------------|:-----------------------------------|:---------------------------------------|:------------------------------------------------|
+| executor.tanium.enable             | EXECUTOR_TANIUM_ENABLE             | `false`                                | Enable the Tanium executor                      |
+| executor.tanium.id                 | EXECUTOR_TANIUM_ID                 | `fbcce3cc-9cd3-4fdb-b451-1c90f4ae035d` | Executor ID                                     |
+| executor.tanium.url                | EXECUTOR_TANIUM_URL                |                                        | Tanium URL                                      |
+| executor.tanium.api-key            | EXECUTOR_TANIUM_API-KEY            |                                        | Tanium API key                                  |
+| executor.tanium.computer-group-id  | EXECUTOR_TANIUM_COMPUTER_GROUP_ID  |                                        | Tanium Computer Group to be used in simulations |
+| executor.tanium.windows-package-id | EXECUTOR_TANIUM_WINDOWS_PACKAGE_ID |                                        | ID of the OpenBAS Tanium Windows package        |
+| executor.tanium.unix-package-id    | EXECUTOR_TANIUM_UNIX_PACKAGE_ID    |                                        | ID of the OpenBAS Tanium Unix package           |
 
 !!! note "Tanium API Key"
 
@@ -55,17 +60,78 @@ Also, the assets in the selected computer groups should now be available in the 
 
 ![Endpoints](../assets/tanium-endpoints.png)
 
-NB : An Asset can only have one Tanium agent installed thanks to an unicity with hostname and IP parameters. 
-If you try to install again a Tanium agent on a platform, it will overwrite the actual one and you will always 
+NB : An Asset can only have one Tanium agent installed thanks to an unicity with hostname and IP parameters.
+If you try to install again a Tanium agent on a platform, it will overwrite the actual one and you will always
 see one endpoint on the OpenBAS endpoint page.
 
 !!! success "Installation done"
 
     You are now ready to leverage your Tanium platform to run OpenBAS payloads!
 
+## Crowdstrike Falcon Agent
+
+The Crowdstrike Falcon agent can be leveraged to execute implants as detached processes that will the execute payloads
+according to the [OpenBAS architecture](https://docs.openbas.io/latest/deployment/overview).
+
+### Configure the Crowdstrike Platform
+
+#### Upload OpenBAS scripts
+
+First of all, you need to create two custom scripts.
+
+To create it, go to `Host setup and management` > `Response and containment` > `Response scripts and files`.
+
+![Crowdstrike unix script](../assets/crowdstrike-unix-script.png)
+![Crowdstrike windows script](../assets/crowdstrike-windows-script.png)
+
+![Crowdstrike RTR script](../assets/crowdstrike-RTR-scripts.png)
+
+#### Create a host group with your targeted assets
+
+To create a host group, go to `Host setup and management` > `Host groups`.
+
+### Configure the OpenBAS platform
+
+To use the Crowdstrike executor, just fill the following configuration.
+
+| Parameter                                | Environment variable                     | Default value                          | Description                                    |
+|:-----------------------------------------|:-----------------------------------------|:---------------------------------------|:-----------------------------------------------|
+| executor.crowdstrike.enable              | EXECUTOR_CROWDSTRIKE_ENABLE              | `false`                                | Enable the Crowdstrike executor                |
+| executor.crowdstrike.id                  | EXECUTOR_CROWDSTRIKE_ID                  | `2a16dcc4-55ac-40fc-8110-d5968a46cdd1` | Executor ID                                    |
+| executor.crowdstrike.api-url             | EXECUTOR_CROWDSTRIKE_API_URL             | `https://api.us-2.crowdstrike.com`     | Crowdstrike API url                            |
+| executor.crowdstrike.client-id           | EXECUTOR_CROWDSTRIKE_CLIENT_ID           |                                        | Crowdstrike client id                          |
+| executor.crowdstrike.client-secret       | EXECUTOR_CROWDSTRIKE_CLIENT_SECRET       |                                        | Crowdstrike client secret                      |
+| executor.crowdstrike.host-group          | EXECUTOR_CROWDSTRIKE_HOST_GROUP          |                                        | Crowdstrike host group                         |
+| executor.crowdstrike.windows-script-name | EXECUTOR_CROWDSTRIKE_WINDOWS_SCRIPT_NAME | `OpenBAS Subprocessor (Windows)`       | Name of the OpenBAS Crowdstrike windows script |
+| executor.crowdstrike.unix-script-name    | EXECUTOR_CROWDSTRIKE_UNIX_SCRIPT_NAME    | `OpenBAS Subprocessor (Unix)`          | Name of the OpenBAS Crowdstrike unix script    |
+
+!!! note "Crowdstrike API Key"
+
+    Please note that the Crowdstrike API key should have the following permissions: API integrations, Hosts, Host groups, Real time response.
+
+### Checks
+
+Once enabled, you should see Crowdstrike available in your `Install agents` section
+
+![Crowdstrike available agent](../assets/crowdstrike-available-agent.png)
+
+Also, the assets in the selected computer groups should now be available in the endpoints section in OpenBAS:
+
+![Crowdstrike Endpoints](../assets/crowdstrike-endpoints.png)
+
+NB : An Asset can only have one Crowdstrike agent installed thanks to an unicity with hostname and IP parameters.
+If you try to install again a Crowdstrike agent on a platform, it will overwrite the actual one and you will always
+see one endpoint on the OpenBAS endpoint page.
+
+!!! success "Installation done"
+
+    You are now ready to leverage your Crowdstrike platform to run OpenBAS payloads!
+
+
 ## Caldera Agent
 
-The Caldera agent can be leveraged to execute implants as detached processes that will the execute payloads according to the [OpenBAS architecture](https://docs.openbas.io/latest/deployment/overview/#architecture).
+The Caldera agent can be leveraged to execute implants as detached processes that will the execute payloads according to
+the [OpenBAS architecture](https://docs.openbas.io/latest/deployment/overview/#architecture).
 
 !!! note "Caldera already installed"
 
@@ -73,7 +139,8 @@ The Caldera agent can be leveraged to execute implants as detached processes tha
 
 ### Deploy Caldera
 
-To deploy Caldera, you can just add Caldera to the OpenBAS stack, we advise you to modify your `docker-compose.yml` and add a [Caldera service](https://github.com/OpenBAS-Platform/caldera/blob/filigran/docker/docker-compose.yml):
+To deploy Caldera, you can just add Caldera to the OpenBAS stack, we advise you to modify your `docker-compose.yml` and
+add a [Caldera service](https://github.com/OpenBAS-Platform/caldera/blob/filigran/docker/docker-compose.yml):
 
 ```
 services:
@@ -90,9 +157,13 @@ services:
         target: /usr/src/app/conf/local.yml
 ```
 
-As you can see in the configuration, you will also need a configuration file [caldera.yml](https://github.com/OpenBAS-Platform/caldera/blob/filigran/docker/caldera.yml) because Caldera does not support well environment variables for configuration.
+As you can see in the configuration, you will also need a configuration
+file [caldera.yml](https://github.com/OpenBAS-Platform/caldera/blob/filigran/docker/caldera.yml) because Caldera does
+not support well environment variables for configuration.
 
-Download [caldera.yml](https://github.com/OpenBAS-Platform/caldera/blob/filigran/docker/caldera.yml) and put it alongside your `docker-compose.yml` file. This file must be modified prior launching, only change what is marked as **Change this**, listed below.
+Download [caldera.yml](https://github.com/OpenBAS-Platform/caldera/blob/filigran/docker/caldera.yml) and put it
+alongside your `docker-compose.yml` file. This file must be modified prior launching, only change what is marked as *
+*Change this**, listed below.
 
 ```yaml
 users:
@@ -121,8 +192,8 @@ Then, just change the OpenBAS configuration as follow:
 
 | Parameter                   | Environment variable        | Default value | Description                                                                                  |
 |:----------------------------|:----------------------------|:--------------|:---------------------------------------------------------------------------------------------|
-| executor.caldera.enable     | EXECUTOR_CALDERA_ENABLE     | `false`       | Enable the Caldera executor           						                               |
-| executor.caldera.url        | EXECUTOR_CALDERA_URL        |               | Caldera URL                           													   |
+| executor.caldera.enable     | EXECUTOR_CALDERA_ENABLE     | `false`       | Enable the Caldera executor           						                                                 |
+| executor.caldera.url        | EXECUTOR_CALDERA_URL        |               | Caldera URL                           													                                          |
 | executor.caldera.public-url | EXECUTOR_CALDERA_PUBLIC-URL |               | Caldera URL accessible from endpoints (ex: http://caldera.myopenbas.myorganization.com:8888) |
 | executor.caldera.api-key    | EXECUTOR_CALDERA_API-KEY    |               | Caldera API key                                                                              |
 
@@ -139,14 +210,15 @@ OpenBAS has built-in instruction if you want command line examples to deploy the
 ![Caldera deploy agents](../assets/caldera-deploy-agent.png)
 
 !!! warning "Caldera AV detection"
-    
+
     By default, the Caldera agent "Sandcat" is detected and blocked by antivirus. Here, we are using Caldera as a neutral executor that will execute implants that will execute payloads, so you need to add the proper AV exclusions as instructed in the OpenBAS screen.
 
     ![Caldera AV exclusion](../assets/caldera-av.png)
 
 #### Checks
 
-All assets with a proper Caldera agent installed using the OpenBAS provided command line (then persistent) should now be available in the OpenBAS endpoints list.
+All assets with a proper Caldera agent installed using the OpenBAS provided command line (then persistent) should now be
+available in the OpenBAS endpoints list.
 
 ![Endpoints](../assets/caldera-endpoints.png)
 
