@@ -1,5 +1,5 @@
 # REST API
-OpenBAS provides a REST API, allowing users to perform various actions programmatically. The API enables users to interact with OpenBAS's functionality and data, offering a powerful tool for automation, integration, and customization. All actions that can be performed through the platform's graphical interface are also achievable via the API.
+OpenBAS provides a REST API, allowing users to perform various actions programmatically. The API enables users to interact with OpenBAS's functionality and data, offering a powerful tool for automation, integration, and customization. Any action available through the platform's graphical interface can also be executed via the API.
 
 
 ## Authentication
