@@ -9,7 +9,9 @@ be in charge of executing implants as detached processes. Implants will then exe
 
 ## OpenBAS Agent
 
-[More information here](../../usage/openbas-agent.md)
+The OpenBAS agent is available for Windows, Linux and MacOS, it is the native / default way to execute implants and payloads on endpoints.
+
+[Learn More](../../usage/openbas-agent.md)
 
 ## Tanium Agent
 
@@ -39,7 +41,6 @@ To use the Tanium executor, just fill the following configuration.
 | Parameter                          | Environment variable               | Default value                          | Description                                     |
 |:-----------------------------------|:-----------------------------------|:---------------------------------------|:------------------------------------------------|
 | executor.tanium.enable             | EXECUTOR_TANIUM_ENABLE             | `false`                                | Enable the Tanium executor                      |
-| executor.tanium.id                 | EXECUTOR_TANIUM_ID                 | `fbcce3cc-9cd3-4fdb-b451-1c90f4ae035d` | Executor ID                                     |
 | executor.tanium.url                | EXECUTOR_TANIUM_URL                |                                        | Tanium URL                                      |
 | executor.tanium.api-key            | EXECUTOR_TANIUM_API-KEY            |                                        | Tanium API key                                  |
 | executor.tanium.computer-group-id  | EXECUTOR_TANIUM_COMPUTER_GROUP_ID  |                                        | Tanium Computer Group to be used in simulations |
@@ -68,23 +69,91 @@ see one endpoint on the OpenBAS endpoint page.
 
     You are now ready to leverage your Tanium platform to run OpenBAS payloads!
 
-## Crowdstrike Falcon Agent
+## CrowdStrike Falcon Agent
 
-The Crowdstrike Falcon agent can be leveraged to execute implants as detached processes that will the execute payloads
+The CrowdStrike Falcon agent can be leveraged to execute implants as detached processes that will the execute payloads
 according to the [OpenBAS architecture](https://docs.openbas.io/latest/deployment/overview).
 
-### Configure the Crowdstrike Platform
+### Configure the CrowdStrike Platform
 
 #### Upload OpenBAS scripts
 
-First of all, you need to create two custom scripts.
+First of all, you need to create two custom scripts, one for Windows and one for Unix, covering both Linux and MacOS systems.
 
-To create it, go to `Host setup and management` > `Response and containment` > `Response scripts and files`.
+To create it, go to `Host setup and management` > `Response and containment` > `Response scripts and files`. The names of the scripts can be changed if necessary, they will be put in the OpenBAS configuration.
+
+*Unix Script*
+
+| Attribute             | Value                                                            |
+|:----------------------|:-----------------------------------------------------------------|
+| name                  | OpenBAS Subprocessor (Unix)                                      |
+| shell type            | bash                                                             |
+| script access         | Users with the role of RTR Administrator or RTR Active Responder |
+| shared with workflows | yes                                                              |
+
+Put the following script:
+
+```bash
+command=`echo $1 | grep -o '"command":"[^"]*' | grep -o '[^"]*$'`
+echo $command | base64 -d | sh
+```
+
+Put the following Input schema:
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "command": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "command"
+  ],
+  "type": "object",
+  "description": "This generated schema may need tweaking. In particular format fields are attempts at matching workflow field types but may not be correct."
+}
+```
 
 ![Crowdstrike unix script](../assets/crowdstrike-unix-script.png)
-![Crowdstrike windows script](../assets/crowdstrike-windows-script.png)
 
-![Crowdstrike RTR script](../assets/crowdstrike-RTR-scripts.png)
+*Windows script*
+
+| Attribute             | Value                                                            |
+|:----------------------|:-----------------------------------------------------------------|
+| name                  | OpenBAS Subprocessor (Windows)                                   |
+| shell type            | PowerShell                                                       |
+| script access         | Users with the role of RTR Administrator or RTR Active Responder |
+| shared with workflows | yes                                                              |
+
+Put the following script:
+
+```PowerShell
+$command = $args[0] | ConvertFrom-Json | Select -ExpandProperty 'command';
+cmd.exe /d /c powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -NonInteractive -NoProfile -Command "Invoke-Expression ([System.Text.Encoding]::UTF8.GetString([convert]::FromBase64String('$command')))"
+```
+
+Put the following Input schema:
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "command": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "command"
+  ],
+  "type": "object",
+  "description": "This generated schema may need tweaking. In particular format fields are attempts at matching workflow field types but may not be correct."
+}
+```
+![CrowdStrike windows script](../assets/crowdstrike-windows-script.png)
+
+Once created, your RTR scripts should have something like this:
+
+![CrowdStrike RTR script](../assets/crowdstrike-scripts.png)
 
 #### Create a host group with your targeted assets
 
@@ -92,12 +161,15 @@ To create a host group, go to `Host setup and management` > `Host groups`.
 
 ### Configure the OpenBAS platform
 
-To use the Crowdstrike executor, just fill the following configuration.
+!!! warning "CrowdStrike API Key"
+
+    Please note that the CrowdStrike API key should have the following permissions: API integrations, Hosts, Host groups, Real time response.
+
+To use the CrowdStrike executor, just fill the following configuration.
 
 | Parameter                                | Environment variable                     | Default value                          | Description                                    |
 |:-----------------------------------------|:-----------------------------------------|:---------------------------------------|:-----------------------------------------------|
 | executor.crowdstrike.enable              | EXECUTOR_CROWDSTRIKE_ENABLE              | `false`                                | Enable the Crowdstrike executor                |
-| executor.crowdstrike.id                  | EXECUTOR_CROWDSTRIKE_ID                  | `2a16dcc4-55ac-40fc-8110-d5968a46cdd1` | Executor ID                                    |
 | executor.crowdstrike.api-url             | EXECUTOR_CROWDSTRIKE_API_URL             | `https://api.us-2.crowdstrike.com`     | Crowdstrike API url                            |
 | executor.crowdstrike.client-id           | EXECUTOR_CROWDSTRIKE_CLIENT_ID           |                                        | Crowdstrike client id                          |
 | executor.crowdstrike.client-secret       | EXECUTOR_CROWDSTRIKE_CLIENT_SECRET       |                                        | Crowdstrike client secret                      |
@@ -105,13 +177,9 @@ To use the Crowdstrike executor, just fill the following configuration.
 | executor.crowdstrike.windows-script-name | EXECUTOR_CROWDSTRIKE_WINDOWS_SCRIPT_NAME | `OpenBAS Subprocessor (Windows)`       | Name of the OpenBAS Crowdstrike windows script |
 | executor.crowdstrike.unix-script-name    | EXECUTOR_CROWDSTRIKE_UNIX_SCRIPT_NAME    | `OpenBAS Subprocessor (Unix)`          | Name of the OpenBAS Crowdstrike unix script    |
 
-!!! note "Crowdstrike API Key"
-
-    Please note that the Crowdstrike API key should have the following permissions: API integrations, Hosts, Host groups, Real time response.
-
 ### Checks
 
-Once enabled, you should see Crowdstrike available in your `Install agents` section
+Once enabled, you should see CrowdStrike available in your `Install agents` section
 
 ![Crowdstrike available agent](../assets/crowdstrike-available-agent.png)
 
@@ -119,13 +187,11 @@ Also, the assets in the selected computer groups should now be available in the 
 
 ![Crowdstrike Endpoints](../assets/crowdstrike-endpoints.png)
 
-NB : An Asset can only have one Crowdstrike agent installed thanks to an unicity with hostname and IP parameters.
-If you try to install again a Crowdstrike agent on a platform, it will overwrite the actual one and you will always
-see one endpoint on the OpenBAS endpoint page.
+NB : An Asset can only have one CrowdStrike agent installed thanks to an unicity with hostname and IP parameters. If you try to install again a CrowdStrike agent on a platform, it will overwrite the actual one and you will always see one endpoint on the OpenBAS endpoint page.
 
 !!! success "Installation done"
 
-    You are now ready to leverage your Crowdstrike platform to run OpenBAS payloads!
+    You are now ready to leverage your CrowdStrike platform to run OpenBAS payloads!
 
 
 ## Caldera Agent
