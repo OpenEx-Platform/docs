@@ -60,7 +60,7 @@ cd docker
 ### Configure the environment
 
 Before running the `docker compose` command, the `docker-compose.yml` file should be configured. By default, the
-`docker-compose.yml` file is using environment variables available in the file `.env.sample`.
+`docker-compose.yml` file is using environment variables available in the `.env.sample` file.
 
 You can either rename the file `.env.sample` in `.env` and put the expected values or just fill directly the
 `docker-compose.yml` with the values corresponding to your environment.
