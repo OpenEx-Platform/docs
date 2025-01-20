@@ -9,7 +9,7 @@ To create a new document, follow these steps:
 
 1. Click the + button in the bottom right corner of the screen.
 2. Select a file to create your document.
-3. Optionally, add a description and tags to provide additional context. You can also directly link your documents to
+3. Optionally, add a description and tags to provide additional context. You can also link your documents directly to specific simulations or scenarios.
    specific simulations or scenarios.
 
 ![Document creation](../assets/document-creation.png)
