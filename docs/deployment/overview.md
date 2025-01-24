@@ -49,7 +49,7 @@ Collectors are used to connect to all security systems such as SIEMs, XDRs, EDRs
 | RabbitMQ                  | >= 4.0              | 1 core    | ≥ 512MB      | Standard                     | ≥ 2GB              |
 | S3 / MinIO                | ≥ RELEASE.2023-02   | 1 core    | ≥ 128MB      | SSD                          | ≥ 16GB             |
 
-Please note that since the version of these dependencies are recommended ones, OpenBAS might work with earlier version. However, we won't provide support on versions earlier than the recommended ones.
+Please note that while the versions of these dependencies are the recommended ones, OpenBAS may still function with earlier versions. However, we will not provide support for versions prior to the recommended ones.
 
 ### Platform
 
