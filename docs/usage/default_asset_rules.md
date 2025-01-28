@@ -8,3 +8,5 @@ When you create an Inject in a Scenario, if the Scenario has a tag matching one 
 
 ## OpenCTI default rule
 By default, a rule for the **opencti** tag is created. This tag is automatically applied to Scenarios generated from OpenCTI (see [Generating Scenario from OpenCTI](../scenario/opencti_scenario.md) ). This default rule cannot be removed, and its tag cannot be modified.
+
+![Asset Rules](./assets/asset_rules.png)
