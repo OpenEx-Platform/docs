@@ -33,7 +33,7 @@ MacOS
 
 Windows
 
-  - Requirement → powershell 7 or higher, admin user, access to the openbas instance used
+  - Requirement → Powershell "run as administrator", and ensure access to the OpenBAS instance being used. If the installation fails, try using PowerShell 7 or higher.
   - Compatibility → All major Windows versions
   - Installation → Create a service with name openbas-agent ("Install Windows Agent")
   - Verification command line → `Get-Service -Name "OBASAgentService"`
@@ -94,3 +94,12 @@ The main features of the OpenBAS Agent are:
 
   The Agent removes execution directories to avoid excessive disk space. 
   The maximum time in minutes that an execution directory can be kept before being deleted is 2 days.
+
+## Troubleshooting
+
+If you experience issues with your agent, the logs are available here:
+
+- Linux -> /opt/openbas-agent/openbas-agent.log
+- MacOS -> /opt/openbas-agent/openbas-agent.log
+- Windows -> "$PROGRAMFILES\Filigran\OBAS Agent\openbas-agent.log"
+
