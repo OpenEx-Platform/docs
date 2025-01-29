@@ -81,16 +81,16 @@ MINIO_ROOT_USER=ChangeMeAccess
 MINIO_ROOT_PASSWORD=ChangeMeKey
 RABBITMQ_DEFAULT_USER=ChangeMe
 RABBITMQ_DEFAULT_PASS=ChangeMe
-SPRING_MAIL_HOST=smtp.changeme.com
+SPRING_MAIL_HOST=smtp.example.com
 SPRING_MAIL_PORT=465
-SPRING_MAIL_USERNAME=ChangeMe@domain.com
+SPRING_MAIL_USERNAME=ChangeMe@example.com
 SPRING_MAIL_PASSWORD=ChangeMe
 OPENBAS_MAIL_IMAP_ENABLED=true
-OPENBAS_MAIL_IMAP_HOST=imap.changeme.com
+OPENBAS_MAIL_IMAP_HOST=imap.example.com
 OPENBAS_MAIL_IMAP_PORT=993
-OPENBAS_ADMIN_EMAIL=ChangeMe@domain.com # Should be a valid email address
+OPENBAS_ADMIN_EMAIL=ChangeMe@example.com # must be a valid email address
 OPENBAS_ADMIN_PASSWORD=ChangeMe
-OPENBAS_ADMIN_TOKEN=ChangeMe # Should be a valid UUI
+OPENBAS_ADMIN_TOKEN=ChangeMe # must be a valid UUID
 COLLECTOR_MITRE_ATTACK_ID=3050d2a3-291d-44eb-8038-b4e7dd107436 # No need for change
 COLLECTOR_ATOMIC_RED_TEAM_ID=0f2a85c1-0a3b-4405-a79c-c65398ee4a76 # No need for change
 ```
@@ -214,12 +214,17 @@ OpenBAS will use the red user.
 
 #### Installation of dependencies
 
-You have to install all the needed dependencies for the main application if you would like to play breach and attack
-simulation scenarios. The example below is for Ubuntu:
+You have to install all the mandatory dependencies for the main application if you would like to play breach and attack
+simulation scenarios.
+You need at least Java 22, RabbitMQ, MinIO (for object storage) and PostgreSQL (16 and above).
+
+The example below is for Ubuntu 24.04 LTS:
 
 ```bash
-sudo apt install openjdk-22-jre
+# Install Java 22, RabbitMQ and Postgres 16
+sudo apt install openjdk-22-jre rabbitmq-server postgresql-16 
 ```
+Additionally, instructions to install MinIO for your platform can be found on the [MinIO website](https://min.io/docs). 
 
 #### Download the application files
 
@@ -235,14 +240,23 @@ tar xvfz openbas-release-{RELEASE_VERSION}.tar.gz
 
 #### Configure the application
 
-The main application has just one environment configuration file to change.
+You may change the `application.properties` file (located at the root of the extracted release archive)
+according to your needs; alternatively you may set the equivalent environment variables.
 
-```bash
-cd openbas
+```shell
+$ cd openbas
+$ ls
+application.properties  openbas-api.jar
 ```
 
-Change the *application.properties* file according to your configuration of PostgreSQL, RabbitMQ, Minio and to your
-platform.
+!!! note "Mandatory configuration"
+
+    Note that the configuration keys relevant to the mandatory dependencies listed above must be set in the file or as environment variables.
+
+See the Configuration section for more details:
+* [PostgreSQL](configuration.md#postgresql)
+* [RabbitMQ](configuration.md#rabbitmq)
+* [MinIO](configuration.md#s3-bucket)
 
 #### Start the application
 
@@ -273,7 +287,7 @@ java -jar openbas-api.jar
 
 ### Deploy behind a reverse proxy
 
-If you want to use OpenBAS behind a reverse proxy with a context path, like `https://domain.com/openbas`, please change
+If you want to use OpenBAS behind a reverse proxy with a context path, like `https://example.com/openbas`, please change
 the `base_path` static parameter.
 
 - `APP__BASE_PATH=/openbas`
