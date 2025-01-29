@@ -216,9 +216,10 @@ OpenBAS will use the red user.
 
 You have to install all the mandatory dependencies for the main application if you would like to play breach and attack
 simulation scenarios.
-You need at least Java 22, RabbitMQ, MinIO (for object storage) and PostgreSQL (16 and above).
+You need at least Java 22, RabbitMQ, MinIO (for object storage) and PostgreSQL (database). See the [Dependencies section](overview.md#dependencies)
+for details on the recommended (and supported) versions of the dependencies.
 
-The example below is for Ubuntu 24.04 LTS:
+The example below is for Ubuntu 24.04 LTS (not guaranteed to yield the recommended versions):
 
 ```bash
 # Install Java 22, RabbitMQ and Postgres 16
