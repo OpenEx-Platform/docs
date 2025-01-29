@@ -254,9 +254,10 @@ application.properties  openbas-api.jar
     Note that the configuration keys relevant to the mandatory dependencies listed above must be set in the file or as environment variables.
 
 See the Configuration section for more details:
-* [PostgreSQL](configuration.md#postgresql)
-* [RabbitMQ](configuration.md#rabbitmq)
-* [MinIO](configuration.md#s3-bucket)
+
+- [PostgreSQL](configuration.md#postgresql)
+- [RabbitMQ](configuration.md#rabbitmq)
+- [MinIO](configuration.md#s3-bucket)
 
 #### Start the application
 
