@@ -214,10 +214,16 @@ OpenBAS will use the red user.
 
 #### Installation of dependencies
 
-You have to install all the mandatory dependencies for the main application if you would like to play breach and attack
+You have to enable all the mandatory dependencies for the main application if you would like to play breach and attack
 simulation scenarios.
 You need at least Java 22, RabbitMQ, MinIO (for object storage) and PostgreSQL (database). See the [Dependencies section](overview.md#dependencies)
 for details on the recommended (and supported) versions of the dependencies.
+
+You may choose to use the dependencies from the provided compose file (see: [Using Docker](#using-docker)).
+If you elect doing so, make sure you disable the openbas server container first, and expose the dependencies on appropriate ports.
+You may refer to [the official Docker documentation](https://docs.docker.com/reference/compose-file/) to achieve this.
+
+Otherwise, you are responsible for providing the dependencies yourself by installing and running them.
 
 The example below is for Ubuntu 24.04 LTS (not guaranteed to yield the recommended versions):
 
@@ -262,7 +268,9 @@ See the Configuration section for more details:
 
 #### Start the application
 
-Start the Application:
+Before you can start the application, ensure your dependencies are up and running, and healthy.
+
+Then start the application itself:
 
 ```bash
 java -jar openbas-api.jar
