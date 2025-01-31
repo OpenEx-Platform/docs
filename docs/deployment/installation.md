@@ -209,6 +209,8 @@ To connect to Caldera, you need to use one of the users defined in your `caldera
 OpenBAS will use the red user.
 
 ## Manual installation
+This section provides instructions to install and run a pre-built OpenBAS server with its dependencies. Note that this does not cover building from source,
+which you will find in the [Development section](/development/build_from_source) instead.
 
 ### Prepare the installation
 
@@ -216,22 +218,24 @@ OpenBAS will use the red user.
 
 You have to enable all the mandatory dependencies for the main application if you would like to play breach and attack
 simulation scenarios.
-You need at least Java 22, RabbitMQ, MinIO (for object storage) and PostgreSQL (database). See the [Dependencies section](overview.md#dependencies)
-for details on the recommended (and supported) versions of the dependencies.
 
 You may choose to use the dependencies from the provided compose file (see: [Using Docker](#using-docker)).
 If you elect doing so, make sure you disable the openbas server container first, and expose the dependencies on appropriate ports.
 You may refer to [the official Docker documentation](https://docs.docker.com/reference/compose-file/) to achieve this.
 
 Otherwise, you are responsible for providing the dependencies yourself by installing and running them.
+You need at least a Java Runtime, PostgreSQL (database), RabbitMQ (queue management), and MinIO (for object storage).
 
-The example below is for Ubuntu 24.04 LTS (not guaranteed to yield the recommended versions):
+!!! note "Supported dependency versions"
 
-```bash
-# Install Java 22, RabbitMQ and Postgres 16
-sudo apt install openjdk-22-jre rabbitmq-server postgresql-16 
-```
-Additionally, instructions to install MinIO for your platform can be found on the [MinIO website](https://min.io/docs). 
+    See the [Dependencies section](overview.md#dependencies) for details on the recommended (and supported) versions of the dependencies.
+
+If you choose to install the dependencies manually, please refer to their respective documentation:
+
+* Java: the [Java documentation portal](https://docs.oracle.com/en/java/)
+* PostgreSQL: the [PostgreSQL documentation portal](https://www.postgresql.org/docs/)
+* RabbitMQ: the [RabbitMQ documentation portal](https://www.rabbitmq.com/docs)
+* MinIO: the [MinIO website](https://min.io/docs). 
 
 #### Download the application files
 
@@ -260,7 +264,7 @@ application.properties  openbas-api.jar
 
     Note that the configuration keys relevant to the mandatory dependencies listed above must be set in the file or as environment variables.
 
-See the Configuration section for more details:
+See the relevant Configuration sections for more details:
 
 - [PostgreSQL](configuration.md#postgresql)
 - [RabbitMQ](configuration.md#rabbitmq)
