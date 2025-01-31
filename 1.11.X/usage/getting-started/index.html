@@ -989,9 +989,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-dashboard" class="md-nav__link">
+  <a href="#home-screen" class="md-nav__link">
     <span class="md-ellipsis">
-      Welcome dashboard
+      Home screen
     </span>
   </a>
   
@@ -1008,9 +1008,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-or-importing-players-and-assets-to-play-with" class="md-nav__link">
+  <a href="#importing-players-and-assets-to-play-with" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating or Importing players and assets to play with
+      Importing players and assets to play with
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-with-simulation-agent-to-simulate-technical-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate with Simulation Agent to simulate technical events
     </span>
   </a>
   
@@ -1452,11 +1461,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../people/" class="md-nav__link">
+      <a href="../teams_and_players_and_organizations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    People
+    Teams, Players and Organizations
   </span>
   
 
@@ -1555,6 +1564,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../components/personas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../components/channels/" class="md-nav__link">
         
   
@@ -1632,14 +1662,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -1647,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../payloads/payloads/" class="md-nav__link">
+      <a href="../components/payloads/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1656,6 +1678,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1777,6 +1807,27 @@
             Improve your security posture
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mitigations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitigations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2051,27 +2102,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rest-api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rest API
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2585,27 +2615,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/build_from_source/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build from source
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../development/platform/" class="md-nav__link">
         
   
@@ -2696,9 +2705,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-dashboard" class="md-nav__link">
+  <a href="#home-screen" class="md-nav__link">
     <span class="md-ellipsis">
-      Welcome dashboard
+      Home screen
     </span>
   </a>
   
@@ -2715,9 +2724,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-or-importing-players-and-assets-to-play-with" class="md-nav__link">
+  <a href="#importing-players-and-assets-to-play-with" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating or Importing players and assets to play with
+      Importing players and assets to play with
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-with-simulation-agent-to-simulate-technical-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate with Simulation Agent to simulate technical events
     </span>
   </a>
   
@@ -2794,8 +2812,7 @@
 <p>This guide aims to give you a full overview of the OpenBAS features and workflows. The platform can be used in various
 contexts to handle Breach and Attack simulations at technical or strategical levels. OpenBAS has been designed as a part
 of the Filigran XTM suite and can be integrated with <a href="https://filigran.io/solutions/open-cti/">OpenCTI</a> to generate
-meaningful attack scenarios based on real threat. OpenBAS is result-oriented with many dashboards helping you to
-evaluate
+meaningful attack scenarios based on real threat. OpenBAS is result-oriented with many dashboards helping you to evaluate
 you security posture given a defined context.</p>
 <p>Here are some examples of use cases:</p>
 <ul>
@@ -2805,21 +2822,25 @@ you security posture given a defined context.</p>
 <li>Organize Capture The Flag with multiple challenges</li>
 <li>Conduct atomic testing</li>
 </ul>
-<h2 id="welcome-dashboard">Welcome dashboard</h2>
-<p>The welcome page provides every OpenBAS platform visitor with a snapshot of the platform activity as well as an overview
+<h2 id="home-screen">Home screen</h2>
+<p>The Home screen provides every OpenBAS platform visitor with a snapshot of the platform activity as well as an overview 
 of your global security posture. You can find more information in <a href="../evaluate/overview/">this section</a>.</p>
 <h2 id="your-first-breach-and-attack-simulation">Your first Breach and Attack Simulation</h2>
-<h3 id="creating-or-importing-players-and-assets-to-play-with">Creating or Importing players and assets to play with</h3>
-<p>First, you need to create or import Players and Assets that will participate in the simulation and be targeted by
-technical or strategical events. To do so, you can either create <a href="teams_and_players_and_organizations.md">players</a>
-and <a href="teams_and_players_and_organizations.md">teams</a> or deploy agent on <a href="../assets/">assets</a>.</p>
+<h3 id="importing-players-and-assets-to-play-with">Importing players and assets to play with</h3>
+<p>First, you need to import Players and Assets that will participate to the simulation and be targeted by technical or
+strategical events. To do so, you need to ...</p>
+<h3 id="integrate-with-simulation-agent-to-simulate-technical-events">Integrate with Simulation Agent to simulate technical events</h3>
+<p>If you want to simulate attack at a technical level, you will need to install a Simulation Agent that will play
+technical events on your imported assets. To do so, you can go to the dedicated panel from the top right button and
+follow installation instructions.</p>
+<p><a class="glightbox" href="../assets/simulation_agents_screen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simulation Agents screen" src="../assets/simulation_agents_screen.png" /></a></p>
 <h3 id="building-your-scenario">Building your Scenario</h3>
 <p>Once integrations is done, you are ready to create your first Scenario!</p>
 <p><a href="../scenario/">Scenarios</a> act as template for your Breach and Attack simulations. After establishing such a template, you
 will be able to schedule it as a one shot simulation, or as a recurring one.</p>
 <ul>
 <li>First, go to the Scenarios menu and create a new one with the + button.</li>
-<li>Once done, define <a href="teams_and_players_and_organizations.md">Teams</a> that will be playing in this Scenario by going to
+<li>Once done, define <a href="../teams_and_players_and_organizations/">Teams</a> that will be playing in this Scenario by going to
   the Definition/Teams tab</li>
 <li>Now go to the <a href="../injects/">Injects</a> tab and add some to build the serie of events that will define the core of your
   Scenario. If you want to stay strategical, you can select inject like "Send individual mails". If you want to go
@@ -2871,7 +2892,7 @@ important to manually validate expectations that need it.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-20T12:59:40+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-13T14:26:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-13</span>
   </span>
 
     

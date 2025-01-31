@@ -722,6 +722,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#caldera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caldera
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#docker-compose-env_1" class="md-nav__link">
     <span class="md-ellipsis">
       Docker compose env
@@ -1688,11 +1697,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/people/" class="md-nav__link">
+      <a href="../../usage/teams_and_players_and_organizations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    People
+    Teams, Players and Organizations
   </span>
   
 
@@ -1791,6 +1800,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../usage/components/personas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../usage/components/channels/" class="md-nav__link">
         
   
@@ -1868,14 +1898,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -1883,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/payloads/payloads/" class="md-nav__link">
+      <a href="../../usage/components/payloads/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1892,6 +1914,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2013,6 +2043,27 @@
             Improve your security posture
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/mitigations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitigations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2287,27 +2338,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../usage/rest-api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rest API
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2821,27 +2851,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/build_from_source/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build from source
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../development/platform/" class="md-nav__link">
         
   
@@ -3043,6 +3052,15 @@
   
     <nav class="md-nav" aria-label="OpenBAS X Caldera (Optional part)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caldera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caldera
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#docker-compose-env_1" class="md-nav__link">
@@ -3257,8 +3275,7 @@
 
 
 <h1 id="installation">Installation</h1>
-<p>All components of OpenBAS are shipped both as <a href="https://hub.docker.com/u/openbas">Docker images</a> and
-manual <a href="https://github.com/OpenBAS-Platform/openbas/releases">installation packages</a>.</p>
+<p>All components of OpenBAS are shipped both as <a href="https://hub.docker.com/u/openbas">Docker images</a> and manual <a href="https://github.com/OpenBAS-Platform/openbas/releases">installation packages</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Production deployment</p>
 <p>For production deployment, we recommend to deploy all components in containers, including dependencies, using native cloud services or orchestration systems such as <a href="https://kubernetes.io">Kubernetes</a>.</p>
@@ -3289,8 +3306,7 @@ released in the <a href="https://github.com/OpenBAS-Platform/openbas/releases">G
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-compose
 </span></code></pre></div>
 <p><strong><span class="twemoji middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 12V6.75l6-1.32v6.48zm17-9v8.75l-10 .15V5.21zM3 13l6 .09v6.81l-6-1.15zm17 .25V22l-10-1.91V13.1z"/></svg></span> Windows and MacOS</strong></p>
-<p>Just download the appropriate <a href="https://www.docker.com/products/docker-desktop">Docker for Desktop</a> version for your
-operating system.</p>
+<p>Just download the appropriate <a href="https://www.docker.com/products/docker-desktop">Docker for Desktop</a> version for your operating system.</p>
 <h3 id="clone-the-repository">Clone the repository</h3>
 <p>Docker helpers are available in the <a href="https://github.com/OpenBAS-Platform/docker">Docker GitHub repository</a>.</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/path/to/your/app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/app
@@ -3298,10 +3314,8 @@ operating system.</p>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span>docker
 </span></code></pre></div>
 <h3 id="configure-the-environment">Configure the environment</h3>
-<p>Before running the <code>docker compose</code> command, the <code>docker-compose.yml</code> file should be configured. By default, the
-<code>docker-compose.yml</code> file is using environment variables available in the <code>.env.sample</code> file.</p>
-<p>You can either rename the file <code>.env.sample</code> in <code>.env</code> and put the expected values or just fill directly the
-<code>docker-compose.yml</code> with the values corresponding to your environment.</p>
+<p>Before running the <code>docker compose</code> command, the <code>docker-compose.yml</code> file should be configured. By default, the <code>docker-compose.yml</code> file is using environment variables available in the file <code>.env.sample</code>.</p>
+<p>You can either rename the file <code>.env.sample</code> in <code>.env</code> and put the expected values or just fill directly the <code>docker-compose.yml</code> with the values corresponding to your environment.</p>
 <h4 id="docker-compose-env">Docker compose env</h4>
 <div class="admonition note">
 <p class="admonition-title">Configuration static parameters</p>
@@ -3315,21 +3329,20 @@ operating system.</p>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">MINIO_ROOT_PASSWORD</span><span class="o">=</span>ChangeMeKey
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nv">RABBITMQ_DEFAULT_USER</span><span class="o">=</span>ChangeMe
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nv">RABBITMQ_DEFAULT_PASS</span><span class="o">=</span>ChangeMe
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nv">SPRING_MAIL_HOST</span><span class="o">=</span>smtp.example.com
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nv">SPRING_MAIL_HOST</span><span class="o">=</span>smtp.changeme.com
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nv">SPRING_MAIL_PORT</span><span class="o">=</span><span class="m">465</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nv">SPRING_MAIL_USERNAME</span><span class="o">=</span>ChangeMe@example.com
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nv">SPRING_MAIL_USERNAME</span><span class="o">=</span>ChangeMe@domain.com
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nv">SPRING_MAIL_PASSWORD</span><span class="o">=</span>ChangeMe
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nv">OPENBAS_MAIL_IMAP_ENABLED</span><span class="o">=</span><span class="nb">true</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nv">OPENBAS_MAIL_IMAP_HOST</span><span class="o">=</span>imap.example.com
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nv">OPENBAS_MAIL_IMAP_HOST</span><span class="o">=</span>imap.changeme.com
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nv">OPENBAS_MAIL_IMAP_PORT</span><span class="o">=</span><span class="m">993</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nv">OPENBAS_ADMIN_EMAIL</span><span class="o">=</span>ChangeMe@example.com<span class="w"> </span><span class="c1"># must be a valid email address</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nv">OPENBAS_ADMIN_EMAIL</span><span class="o">=</span>ChangeMe@domain.com<span class="w"> </span><span class="c1"># Should be a valid email address</span>
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nv">OPENBAS_ADMIN_PASSWORD</span><span class="o">=</span>ChangeMe
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nv">OPENBAS_ADMIN_TOKEN</span><span class="o">=</span>ChangeMe<span class="w"> </span><span class="c1"># must be a valid UUID</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nv">OPENBAS_ADMIN_TOKEN</span><span class="o">=</span>ChangeMe<span class="w"> </span><span class="c1"># Should be a valid UUI</span>
 </span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="nv">COLLECTOR_MITRE_ATTACK_ID</span><span class="o">=</span>3050d2a3-291d-44eb-8038-b4e7dd107436<span class="w"> </span><span class="c1"># No need for change</span>
 </span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="nv">COLLECTOR_ATOMIC_RED_TEAM_ID</span><span class="o">=</span>0f2a85c1-0a3b-4405-a79c-c65398ee4a76<span class="w"> </span><span class="c1"># No need for change</span>
 </span></code></pre></div>
-<p>If your <code>docker-compose</code> deployment does not support <code>.env</code> files, just export all environment variables before
-launching the platform:</p>
+<p>If your <code>docker-compose</code> deployment does not support <code>.env</code> files, just export all environment variables before launching the platform:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="k">$(</span>cat<span class="w"> </span>.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="k">)</span>
 </span></code></pre></div>
 <h3 id="persist-data">Persist data</h3>
@@ -3348,8 +3361,7 @@ launching the platform:</p>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </span></code></pre></div>
 <h4 id="using-docker-swarm">Using Docker swarm</h4>
-<p>In order to have the best experience with Docker, we recommend using the Docker stack feature. In this mode you will
-have the capacity to easily scale your deployment.</p>
+<p>In order to have the best experience with Docker, we recommend using the Docker stack feature. In this mode you will have the capacity to easily scale your deployment.</p>
 <div class="highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># If your virtual machine is not a part of a Swarm cluster, please use:</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docker<span class="w"> </span>swarm<span class="w"> </span>init
 </span></code></pre></div>
@@ -3370,14 +3382,18 @@ have the capacity to easily scale your deployment.</p>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51q-.508.001-1.01.087c-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.75.75 0 0 0-.75.748 11.4 11.4 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137a15.7 15.7 0 0 0 2.93-.266 12.3 12.3 0 0 0 3.823-1.389 10.5 10.5 0 0 0 2.61-2.136c1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg></span> <strong>Use Docker</strong></p>
 <hr />
-<p>Deploy Caldera using Docker and the default <code>docker-compose.yml</code> provided
+<p>Deploy OpenBAS using Docker and the default <code>docker-compose.yml</code> provided
 in the <a href="https://github.com/OpenBAS-Platform/caldera/tree/filigran/docker">docker</a>.</p>
 <p><a href="#using-docker"><span class="twemoji middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Setup</a></p>
 </li>
 </ul>
 </div>
-<p>Unfortunately, Caldera does not support well environment variables, the <code>caldera.yml</code> needs to be modified to change
-default API keys and passwords. Only change what is marked as <strong>Change this</strong>, listed below:</p>
+<p>Before running the <code>docker compose</code> command, the <code>caldera.yml</code> and <code>docker-compose.yml</code> file should be configured. By 
+default, the <code>docker-compose.yml</code> file is using environment variables available in the file <code>.env.sample</code>.</p>
+<p>You can either rename the <code>.env.sample</code> file for <code>.env</code> and enter the required values, or directly update the <code>docker-compose.yml</code> file with the values specific to your environment.</p>
+<h4 id="caldera">Caldera</h4>
+<p>Unfortunately, Caldera does not support well environment variables, we have packaged it but the <code>caldera.yml</code> needs to 
+be modified to change default API keys and passwords. Only change what is marked as <strong>Change this</strong>, listed below:</p>
 <div class="admonition note">
 <p class="admonition-title">Caldera application</p>
 <p>You will never be asked to go into Caldera directly because OpenBAS manages everything for you, so don't hesitate to put the same UUIDv4 in all parameters here.</p>
@@ -3396,70 +3412,63 @@ default API keys and passwords. Only change what is marked as <strong>Change thi
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="nt">app.contact.tunnel.ssh.user_password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ChangeMe</span><span class="w">                                        </span><span class="c1"># Change this</span>
 </span></code></pre></div>
 <h4 id="docker-compose-env_1">Docker compose env</h4>
-<p>Add this environment variable to connect OpenBAS and Caldera:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">INJECTOR_CALDERA_ENABLE</span><span class="o">=</span><span class="nb">true</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">INJECTOR_CALDERA_URL</span><span class="o">=</span><span class="si">${</span><span class="nv">CALDERA_URL</span><span class="k">:-</span><span class="nv">http</span><span class="p">://caldera:</span><span class="nv">8888</span><span class="si">}</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nv">INJECTOR_CALDERA_PUBLIC_URL</span><span class="o">=</span><span class="si">${</span><span class="nv">CALDERA_PUBLIC_URL</span><span class="k">:-</span><span class="nv">http</span><span class="p">://localhost:</span><span class="nv">8888</span><span class="si">}</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nv">INJECTOR_CALDERA_API_KEY</span><span class="o">=</span><span class="si">${</span><span class="nv">CALDERA_API_KEY</span><span class="k">:-</span><span class="nv">ChangeMe</span><span class="si">}</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nv">EXECUTOR_CALDERA_ENABLE</span><span class="o">=</span><span class="nb">true</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nv">EXECUTOR_CALDERA_URL</span><span class="o">=</span><span class="si">${</span><span class="nv">CALDERA_URL</span><span class="k">:-</span><span class="nv">http</span><span class="p">://caldera:</span><span class="nv">8888</span><span class="si">}</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nv">EXECUTOR_CALDERA_PUBLIC_URL</span><span class="o">=</span><span class="si">${</span><span class="nv">CALDERA_PUBLIC_URL</span><span class="k">:-</span><span class="nv">http</span><span class="p">://localhost:</span><span class="nv">8888</span><span class="si">}</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nv">EXECUTOR_CALDERA_API_KEY</span><span class="o">=</span><span class="si">${</span><span class="nv">CALDERA_API_KEY</span><span class="k">:-</span><span class="nv">ChangeMe</span><span class="si">}</span>
+<div class="admonition note">
+<p class="admonition-title">Configuration static parameters</p>
+<p>The complete list of available static parameters is available in the <a href="../configuration/">configuration</a> section.</p>
+</div>
+<p>Whether you are using one method or the other, here are the mandatory parameters to fill:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">POSTGRES_USER</span><span class="o">=</span>ChangeMe
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>ChangeMe
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nv">KEYSTORE_PASSWORD</span><span class="o">=</span>ChangeMe
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nv">MINIO_ROOT_USER</span><span class="o">=</span>ChangeMeAccess
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nv">MINIO_ROOT_PASSWORD</span><span class="o">=</span>ChangeMeKey
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nv">RABBITMQ_DEFAULT_USER</span><span class="o">=</span>ChangeMe
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nv">RABBITMQ_DEFAULT_PASS</span><span class="o">=</span>ChangeMe
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nv">SPRING_MAIL_HOST</span><span class="o">=</span>smtp.changeme.com
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nv">SPRING_MAIL_PORT</span><span class="o">=</span><span class="m">465</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="nv">SPRING_MAIL_USERNAME</span><span class="o">=</span>ChangeMe@domain.com
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nv">SPRING_MAIL_PASSWORD</span><span class="o">=</span>ChangeMe
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="nv">OPENBAS_MAIL_IMAP_HOST</span><span class="o">=</span>imap.changeme.com
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="nv">OPENBAS_MAIL_IMAP_PORT</span><span class="o">=</span><span class="m">993</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="nv">OPENBAS_ADMIN_EMAIL</span><span class="o">=</span>ChangeMe@domain.com
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="nv">OPENBAS_ADMIN_PASSWORD</span><span class="o">=</span>ChangeMe
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="nv">OPENBAS_ADMIN_TOKEN</span><span class="o">=</span>ChangeMe<span class="w"> </span><span class="c1"># Should be a valid UUID</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="nv">CALDERA_URL</span><span class="o">=</span>http://caldera:8888<span class="w"> </span><span class="c1"># Change me for production deployment to something accessible from your OpenBAS</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="nv">CALDERA_PUBLIC_URL</span><span class="o">=</span>http://localhost:8888<span class="w"> </span><span class="c1"># Change me for production deployment to something accessible from your endpoint(s)</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>CALDERA_API-KEY<span class="o">=</span>ChangeMe<span class="w"> </span><span class="c1"># Should be the same as api_key in your caldera.yml file</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="nv">COLLECTOR_MITRE_ATTACK_ID</span><span class="o">=</span>3050d2a3-291d-44eb-8038-b4e7dd107436<span class="w"> </span><span class="c1"># No need for change</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="nv">COLLECTOR_ATOMIC_RED_TEAM_ID</span><span class="o">=</span>0f2a85c1-0a3b-4405-a79c-c65398ee4a76<span class="w"> </span><span class="c1"># No need for change</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="nv">INJECTOR_CALDERA_ENABLE</span><span class="o">=</span><span class="nb">false</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="nv">EXECUTOR_CALDERA_ENABLE</span><span class="o">=</span><span class="nb">false</span>
+</span></code></pre></div>
+<p>If your <code>docker-compose</code> deployment does not support <code>.env</code> files, just export all environment variables before launching the platform:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">export</span><span class="w"> </span><span class="k">$(</span>cat<span class="w"> </span>.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="k">)</span>
 </span></code></pre></div>
 <h5 id="login-to-caldera">Login to Caldera</h5>
-<p>To connect to Caldera, you need to use one of the users defined in your <code>caldera.yml</code> file (either 'red' or 'blue').
+<p>To connect to Caldera, you need to use one of the users defined in your <code>caldera.yml</code> file (either 'red' or 'blue'). 
 OpenBAS will use the red user.</p>
 <h2 id="manual-installation">Manual installation</h2>
-<p>This section provides instructions to install and run a pre-built OpenBAS server with its dependencies. Note that this does not cover building from source,
-which you will find in the <a href="/development/build_from_source">Development section</a> instead.</p>
 <h3 id="prepare-the-installation">Prepare the installation</h3>
 <h4 id="installation-of-dependencies">Installation of dependencies</h4>
-<p>You have to enable all the mandatory dependencies for the main application if you would like to play breach and attack
-simulation scenarios.</p>
-<p>You may choose to use the dependencies from the provided compose file (see: <a href="#using-docker">Using Docker</a>).
-If you elect doing so, make sure you disable the openbas server container first, and expose the dependencies on appropriate ports.
-You may refer to <a href="https://docs.docker.com/reference/compose-file/">the official Docker documentation</a> to achieve this.</p>
-<p>Otherwise, you are responsible for providing the dependencies yourself by installing and running them.
-You need at least a Java Runtime, PostgreSQL (database), RabbitMQ (queue management), and MinIO (for object storage).</p>
-<div class="admonition note">
-<p class="admonition-title">Supported dependency versions</p>
-<p>See the <a href="../overview/#dependencies">Dependencies section</a> for details on the recommended (and supported) versions of the dependencies.</p>
-</div>
-<p>If you choose to install the dependencies manually, please refer to their respective documentation:</p>
-<ul>
-<li>Java: the <a href="https://docs.oracle.com/en/java/">Java documentation portal</a></li>
-<li>PostgreSQL: the <a href="https://www.postgresql.org/docs/">PostgreSQL documentation portal</a></li>
-<li>RabbitMQ: the <a href="https://www.rabbitmq.com/docs">RabbitMQ documentation portal</a></li>
-<li>MinIO: the <a href="https://min.io/docs">MinIO website</a>. </li>
-</ul>
+<p>You have to install all the needed dependencies for the main application if you would like to play breach and attack 
+simulation scenarios. The example below is for Ubuntu:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-22-jre
+</span></code></pre></div>
 <h4 id="download-the-application-files">Download the application files</h4>
 <p>First, you have to <a href="https://github.com/OpenBAS-Platform/openbas/releases">download and extract the latest release file</a>.</p>
-<div class="highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mkdir<span class="w"> </span>/path/to/your/app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/app
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>wget<span class="w"> </span>&lt;https://github.com/OpenBAS-Platform/openbas/releases/download/<span class="o">{</span>RELEASE_VERSION<span class="o">}</span>/openbas-release-<span class="o">{</span>RELEASE_VERSION<span class="o">}</span>.tar.gz&gt;
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>tar<span class="w"> </span>xvfz<span class="w"> </span>openbas-release-<span class="o">{</span>RELEASE_VERSION<span class="o">}</span>.tar.gz
+<div class="highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>mkdir<span class="w"> </span>/path/to/your/app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/app
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>wget<span class="w"> </span>&lt;https://github.com/OpenBAS-Platform/openbas/releases/download/<span class="o">{</span>RELEASE_VERSION<span class="o">}</span>/openbas-release-<span class="o">{</span>RELEASE_VERSION<span class="o">}</span>.tar.gz&gt;
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>tar<span class="w"> </span>xvfz<span class="w"> </span>openbas-release-<span class="o">{</span>RELEASE_VERSION<span class="o">}</span>.tar.gz
 </span></code></pre></div>
 <h3 id="install-the-main-platform">Install the main platform</h3>
 <h4 id="configure-the-application">Configure the application</h4>
-<p>You may change the <code>application.properties</code> file (located at the root of the extracted release archive)
-according to your needs; alternatively you may set the equivalent environment variables.</p>
-<div class="highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>openbas
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>$<span class="w"> </span>ls
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>application.properties<span class="w">  </span>openbas-api.jar
+<p>The main application has just one environment configuration file to change.</p>
+<div class="highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd</span><span class="w"> </span>openbas
 </span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Mandatory configuration</p>
-<p>Note that the configuration keys relevant to the mandatory dependencies listed above must be set in the file or as environment variables.</p>
-</div>
-<p>See the relevant Configuration sections for more details:</p>
-<ul>
-<li><a href="../configuration/#postgresql">PostgreSQL</a></li>
-<li><a href="../configuration/#rabbitmq">RabbitMQ</a></li>
-<li><a href="../configuration/#s3-bucket">MinIO</a></li>
-</ul>
+<p>Change the <em>application.properties</em> file according to your configuration of PostgreSQL, RabbitMQ, Minio and to your platform.</p>
 <h4 id="start-the-application">Start the application</h4>
-<p>Before you can start the application, ensure your dependencies are up and running, and healthy.</p>
-<p>Then start the application itself:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>java<span class="w"> </span>-jar<span class="w"> </span>openbas-api.jar
+<p>Start the Application:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>java<span class="w"> </span>-jar<span class="w"> </span>openbas-api.jar
 </span></code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Installation done</p>
@@ -3478,31 +3487,28 @@ according to your needs; alternatively you may set the equivalent environment va
 </ul>
 </div>
 <h3 id="deploy-behind-a-reverse-proxy">Deploy behind a reverse proxy</h3>
-<p>If you want to use OpenBAS behind a reverse proxy with a context path, like <code>https://example.com/openbas</code>, please change
-the <code>base_path</code> static parameter.</p>
+<p>If you want to use OpenBAS behind a reverse proxy with a context path, like <code>https://domain.com/openbas</code>, please change the <code>base_path</code> static parameter.</p>
 <ul>
 <li><code>APP__BASE_PATH=/openbas</code></li>
 </ul>
 <p>By default OpenBAS use websockets so don't forget to configure your proxy for this usage, an example with <code>Nginx</code>:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span>proxy_cache<span class="w">                 </span>off<span class="p">;</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span>proxy_buffering<span class="w">             </span>off<span class="p">;</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span>proxy_http_version<span class="w">          </span><span class="m">1</span>.1<span class="p">;</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span>proxy_set_header<span class="w"> </span>Upgrade<span class="w">    </span><span class="nv">$http_upgrade</span><span class="p">;</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span>proxy_set_header<span class="w"> </span>Connection<span class="w"> </span><span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span>proxy_set_header<span class="w"> </span>Host<span class="w">       </span><span class="nv">$host</span><span class="p">;</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span>chunked_transfer_encoding<span class="w">   </span>off<span class="p">;</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span>proxy_pass<span class="w">                  </span>http://YOUR_UPSTREAM_BACKEND<span class="p">;</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">  </span><span class="o">}</span>
+<div class="highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span>proxy_cache<span class="w">                 </span>off<span class="p">;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span>proxy_buffering<span class="w">             </span>off<span class="p">;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span>proxy_http_version<span class="w">          </span><span class="m">1</span>.1<span class="p">;</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span>proxy_set_header<span class="w"> </span>Upgrade<span class="w">    </span><span class="nv">$http_upgrade</span><span class="p">;</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span>proxy_set_header<span class="w"> </span>Connection<span class="w"> </span><span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span>proxy_set_header<span class="w"> </span>Host<span class="w">       </span><span class="nv">$host</span><span class="p">;</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span>chunked_transfer_encoding<span class="w">   </span>off<span class="p">;</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span>proxy_pass<span class="w">                  </span>http://YOUR_UPSTREAM_BACKEND<span class="p">;</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="o">}</span>
 </span></code></pre></div>
 <h3 id="additional-memory-information">Additional memory information</h3>
 <p>OpenBAS platform is based on a JAVA runtime. The application needs at least 4GB of RAM to work properly.</p>
 <h4 id="postgresql">PostgreSQL</h4>
-<p>PostgreSQL is the main database of OpenBAS. You can find more information in
-the <a href="https://hub.docker.com/_/postgres">official PostgresQL documentation</a>.</p>
+<p>PostgreSQL is the main database of OpenBAS. You can find more information in the <a href="https://hub.docker.com/_/postgres">official PostgresQL documentation</a>.</p>
 <h4 id="minio">MinIO</h4>
-<p>MinIO is a small process and does not require a high amount of memory. More information are available for Linux here on
-the <a href="https://github.com/minio/minio/tree/master/docs/deployment/kernel-tuning">Kernel tuning guide</a>.</p>
+<p>MinIO is a small process and does not require a high amount of memory. More information are available for Linux here on the <a href="https://github.com/minio/minio/tree/master/docs/deployment/kernel-tuning">Kernel tuning guide</a>.</p>
 
 
 
@@ -3525,7 +3531,7 @@ the <a href="https://github.com/minio/minio/tree/master/docs/deployment/kernel-t
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-31T14:33:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-31</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-13T12:56:18+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-13</span>
   </span>
 
     

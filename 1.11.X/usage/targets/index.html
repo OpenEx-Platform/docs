@@ -1410,11 +1410,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../people/" class="md-nav__link">
+      <a href="../teams_and_players_and_organizations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    People
+    Teams, Players and Organizations
   </span>
   
 
@@ -1513,6 +1513,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../components/personas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../components/channels/" class="md-nav__link">
         
   
@@ -1590,14 +1611,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -1605,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../payloads/payloads/" class="md-nav__link">
+      <a href="../components/payloads/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1614,6 +1627,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1735,6 +1756,27 @@
             Improve your security posture
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mitigations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitigations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2009,27 +2051,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rest-api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rest API
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2543,27 +2564,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/build_from_source/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build from source
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../development/platform/" class="md-nav__link">
         
   
@@ -2703,14 +2703,14 @@
 
 
 <h1 id="targets">Targets</h1>
-<p>When you are using an <a href="../injects/">Inject</a>, whether for <a href="../atomic/">Atomic testing</a>, <a href="../scenario/">Scenario</a> or <a href="../simulation/">Simulation</a>, it's necessary to define the recipients, known as "targets", which could include <a href="teams_and_players_and_organizations.md">Players, Teams</a>, <a href="../assets/">Assets (endpoints) or/and Asset groups</a> it will be sent to. They are called "targets" of the inject.</p>
+<p>When you are using an <a href="../injects/">Inject</a>, whether for <a href="../atomic/">Atomic testing</a>, <a href="../scenario/">Scenario</a> or <a href="../simulation/">Simulation</a>, it's necessary to define the recipients, known as "targets", which could include <a href="../teams_and_players_and_organizations/">Players, Teams</a>, <a href="../assets/">Assets (endpoints) or/and Asset groups</a> it will be sent to. They are called "targets" of the inject.</p>
 <p>Note that certain injects can't target assets, while others can't target players. For instance, the "Send individual mails" inject can only target players and teams, not assets. </p>
 <p>Target selection is performed during inject creation or update.</p>
 <!-- screenshot of an inject contract -->
 
 <h2 id="selecting-players-and-teams">Selecting Players and Teams</h2>
 <p>Directly targeting a player isn't yet possible. Instead, you must target a team. In scenarios or simulations, the team must be included in the scenario or simulation to be selectable. However, when creating atomic testing, all teams in the platform are selectable.</p>
-<p>Note that visibility of teams and players is limited by the organization's <a href="teams_and_players_and_organizations.md">segregation</a>.</p>
+<p>Note that visibility of teams and players is limited by the organization's <a href="../teams_and_players_and_organizations/">segregation</a>.</p>
 <p>When selecting a team as the target, all players within that team will be targeted by the inject. Each player will have to complete expectations.</p>
 <!-- screenshot of an inject with selected teams -->
 
