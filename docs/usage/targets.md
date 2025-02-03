@@ -30,7 +30,9 @@ Click on **+** next to the **Teams** section, a dialog appears allowing the user
 
 ![Add a team to a simulation](assets/simulation_add_team.png)
 
-The user then clicks on the team to enable the players.
+The user now has two ways to enable players:
+- Click on the team, a drawer opens. Click on the **DISABLED** tag of a player, it is now enabled.
+- Click on the three dots of the team, then **Manage players**. A drawer opens, click on the **DISABLED** tag of a player.
 
 ![Enable a player in a simulation](assets/simulation_enable_players.png)
 
