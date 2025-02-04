@@ -64,8 +64,20 @@ There are different types of injector in OpenBAS.
 
 Manual action reminders are injects designed to prompt animation team to perform specific actions manually. It allows to place in the timeline a stimulus to be produced manually, outside the platform (e.g. simulated a call from a journalist on the switchboard telephone). These reminders ensure that critical tasks are completed as part of the simulation, enhancing the accuracy and realism of the exercise.
 
-The inject associated with this type is referred to as `Manual`.
+The inject associated with this type is referred to as `Manual`. To be able to log events not directly related to an email or a sms, you can attach manual expectation to this events (see [Manual Expectations](https://docs.openbas.io/latest/usage/expectations/?h=manual#manual-expectations)). 
 
+####Example of manual inject:
+
+- "A crisis cell has been put together"
+
+####Manual expectations:
+
+- "The team has answered the call from the journalist"
+- "Analyze the situation and identify the issues."
+- "Predicting future developments"
+- "Decide on the actions to be taken"
+- "Coordinate & communicate with internal and external stakeholders."
+- "Establish and share updates of the ongoing situation"
 
 ### Direct contact
 
