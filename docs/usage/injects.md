@@ -70,7 +70,7 @@ The inject associated with this type is referred to as `Manual`. To be able to l
 
 - "A crisis cell has been put together"
 
-####Manual expectations:
+#### Manual expectations:
 
 -"The team responded to the journalist's inquiry."
 - "Analyze the situation and identify the key issues."
