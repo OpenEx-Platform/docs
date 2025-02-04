@@ -72,7 +72,7 @@ The inject associated with this type is referred to as `Manual`. To be able to l
 
 #### Manual expectations:
 
--"The team responded to the journalist's inquiry."
+- "The team responded to the journalist's inquiry."
 - "Analyze the situation and identify the key issues."
 - "Anticipate future developments."
 - "Determine the necessary actions to take."
