@@ -72,12 +72,12 @@ The inject associated with this type is referred to as `Manual`. To be able to l
 
 ####Manual expectations:
 
-- "The team has answered the call from the journalist"
-- "Analyze the situation and identify the issues."
-- "Predicting future developments"
-- "Decide on the actions to be taken"
-- "Coordinate & communicate with internal and external stakeholders."
-- "Establish and share updates of the ongoing situation"
+-"The team responded to the journalist's inquiry."
+- "Analyze the situation and identify the key issues."
+- "Anticipate future developments."
+- "Determine the necessary actions to take."
+- "Coordinate and communicate with both internal and external stakeholders."
+- "Provide regular updates on the ongoing situation."
 
 ### Direct contact
 
