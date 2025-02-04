@@ -66,7 +66,7 @@ Manual action reminders are injects designed to prompt animation team to perform
 
 The inject associated with this type is referred to as `Manual`. To be able to log events not directly related to an email or a sms, you can attach manual expectation to this events (see [Manual Expectations](https://docs.openbas.io/latest/usage/expectations/?h=manual#manual-expectations)). 
 
-####Example of manual inject:
+#### Example of a manual inject:
 
 - "A crisis cell has been put together"
 
