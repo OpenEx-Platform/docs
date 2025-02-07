@@ -226,7 +226,7 @@ When an agent completes execution, the server retrieves all traces and computes 
 
 **Inject Status Computation** 
 
-Once all agents have finished execution, the system computes the Inject status using the same logic as agent status computation.
+After all agents have completed their execution, the system calculates the Inject status using the same logic applied to compute the agent status.
 
 
 ## Conditional execution of injects
