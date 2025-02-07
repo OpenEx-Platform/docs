@@ -262,7 +262,7 @@ java -jar openbas-api.jar
 2. cp -r builder/prod/* ../openbas-api/src/main/resources/static/ 
 3. cd ../openbas-api
 4. mvn clean install -DskipTests
-5. create an application.properties based on the existing on in openbas-api and filled all mandatory fields
+5. create an application.properties based on the existing one in openbas-api and fill all the mandatory fields
 6. run java -jar target/openbas-api.jar --spring.config.location=%PATH%\application.properties
 
 ## Community contributions
