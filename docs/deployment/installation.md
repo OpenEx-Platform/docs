@@ -13,7 +13,7 @@ manual [installation packages](https://github.com/OpenBAS-Platform/openbas/relea
 
     ---
 
-    Deploy OpenBAS using Docker and the default `docker-compose.yml` provided
+    Deploy OpenBAS using Docker and the default `docker-compose.base.yml` provided
     in the [docker](https://github.com/OpenBAS-Platform/docker).
 
     [:octicons-arrow-right-24:{ .middle } Setup](#using-docker)
@@ -59,11 +59,11 @@ cd docker
 
 ### Configure the environment
 
-Before running the `docker compose` command, the `docker-compose.yml` file should be configured. By default, the
-`docker-compose.yml` file is using environment variables available in the `.env.sample` file.
+Before running the `docker compose` command, the `docker-compose.base.yml` file should be configured. By default, the
+`docker-compose.base.yml` file is using environment variables available in the `.env.sample` file.
 
 You can either rename the file `.env.sample` in `.env` and put the expected values or just fill directly the
-`docker-compose.yml` with the values corresponding to your environment.
+`docker-compose.base.yml` with the values corresponding to your environment.
 
 #### Docker compose env
 
@@ -106,7 +106,7 @@ export $(cat .env | grep -v "#" | xargs)
 
 The default for OpenBAS data is to be persistent.
 
-In the `docker-compose.yml`, you will find at the end the list of necessary persistent volumes for the dependencies:
+In the `docker-compose.base.yml`, you will find at the end the list of necessary persistent volumes for the dependencies:
 
 ```yaml
 volumes:
@@ -123,8 +123,24 @@ After changing your `.env` file run `docker compose` in detached (-d) mode:
 
 ```bash
 sudo systemctl start docker.service
-# Run docker compose in detached
-docker compose up -d
+```
+
+To start OpenBAS with the essential services, run:
+
+```bash
+docker compose -f docker-compose.base.yml up -d
+```
+
+To start OpenBAS with Atomic Red Team threat library, run:
+
+```bash
+docker compose -f docker-compose.base.yml -f docker-compose.atomic-red-team.yml up -d
+```
+
+To start OpenBAS with Caldera, run:
+
+```bash
+docker compose -f docker-compose.base.yml -f docker-compose.caldera.yml up -d
 ```
 
 #### Using Docker swarm
@@ -143,7 +159,7 @@ Put your environment variables in `/etc/environment`:
 # If you already exported your variables to .env from above:
 sudo cat .env >> /etc/environment
 sudo bash -c 'cat .env >> /etc/environment’
-sudo docker stack deploy --compose-file docker-compose.yml openbas
+sudo docker stack deploy --compose-file docker-compose.base.yml openbas
 ```
 
 !!! success "Installation done"
@@ -160,7 +176,7 @@ You can deploy Caldera alongside OpenBAS to manage agent deployment and execute 
 
     ---
 
-    Deploy Caldera using Docker and the default `docker-compose.yml` provided
+    Deploy Caldera using Docker and the default `docker-compose.base.yml` provided
     in the [docker](https://github.com/OpenBAS-Platform/caldera/tree/filigran/docker).
 
     [:octicons-arrow-right-24:{ .middle } Setup](#using-docker)
