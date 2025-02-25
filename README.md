@@ -21,8 +21,6 @@ $ ./serve.sh
 ```
 This will create a virtual environment and install the dependencies, and serve the docs at http://localhost:8000.
 
-Note this does not support hot swapping changed documents, so to see any change, the script should be restarted.
-
 **Windows**
 
 Please follow the Manual instructions below.
